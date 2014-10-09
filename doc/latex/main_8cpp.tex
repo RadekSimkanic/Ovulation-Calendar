@@ -1,0 +1,292 @@
+\hypertarget{main_8cpp}{
+\section{Dokumentace souboru main.cpp}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$fstream$>$}\par
+{\ttfamily \#include $<$cstring$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include \char`\"{}funkce.h\char`\"{}}\par
+\subsection*{Prostory jmen}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceargument}{argument}
+\end{DoxyCompactItemize}
+\subsection*{Definice maker}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8cpp_adeaccccb6672cb6803865381fc58f738}{SOUBOR}~\char`\"{}index.html\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Funkce}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a331b96d01231af2856ca537ab7e26ae8}{volba\_\-m} (unsigned int page, bool \hyperlink{main_8cpp_adb70e6d0bd82d37bfd1ba53cafb0f2a4}{way}=true)
+\begin{DoxyCompactList}\small\item\em volba\_\-m -\/ Volba měsiční kalendář \item\end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a1521d8b46bfeb0b3b1e606fdac3f706f}{volba\_\-mm} (int \hyperlink{main_8cpp_a72511454e33f6b0f7c89f9c19813fe90}{kroku}, int den, int mesic, int rok, int cyklus, int menstruace)
+\begin{DoxyCompactList}\small\item\em volba\_\-mm -\/ Volba menstruační kalendář \item\end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a69c13a1680bebf5b751ad89d434cffe4}{volba\_\-t} (unsigned int page, bool \hyperlink{main_8cpp_adb70e6d0bd82d37bfd1ba53cafb0f2a4}{way}=true)
+\begin{DoxyCompactList}\small\item\em volba\_\-t -\/ Volba týdenní kalendář \item\end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a2f28f1c56e23278e1762193d5f3dd43f}{volba\_\-s} ()
+\item 
+void \hyperlink{main_8cpp_a9f88ec92abe63e972634585300ec4250}{volba\_\-null} ()
+\begin{DoxyCompactList}\small\item\em volba\_\-null -\/ Help \item\end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a23b6929cf0a8d166e0cebc8724dabbd6}{prikazy} (const char $\ast$akt\_\-pozice=\char`\"{}null\char`\"{})
+\begin{DoxyCompactList}\small\item\em prikazy -\/ Příkazy \item\end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Proměnné}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{main_8cpp_a1510269b55145cbed7de0acdeb3d3764}{zkratky\_\-dny} \mbox{[}$\,$\mbox{]} = \{\char`\"{}Po\char`\"{}, \char`\"{}Ut\char`\"{}, \char`\"{}St\char`\"{}, \char`\"{}Ct\char`\"{}, \char`\"{}Pa\char`\"{}, \char`\"{}So\char`\"{}, \char`\"{}Ne\char`\"{}\}
+\item 
+const char $\ast$ \hyperlink{main_8cpp_a2a02984adfc3969e3a6b30b44eb65359}{nazvy\_\-mesicu} \mbox{[}$\,$\mbox{]} = \{\char`\"{}Leden\char`\"{}, \char`\"{}Únor\char`\"{}, \char`\"{}Březen\char`\"{}, \char`\"{}Duben\char`\"{}, \char`\"{}Květen\char`\"{}, \char`\"{}Červen\char`\"{}, \char`\"{}Červenec\char`\"{}, \char`\"{}Srpen\char`\"{}, \char`\"{}Září\char`\"{}, \char`\"{}Říjen\char`\"{}, \char`\"{}Listopad\char`\"{}, \char`\"{}Prosinec\char`\"{}\}
+\item 
+const char $\ast$ \hyperlink{main_8cpp_ac6d9cb7f77c1dc7625d1d44a38b6d80c}{css\_\-class} \mbox{[}$\,$\mbox{]} = \{\char`\"{}menstruace\char`\"{}, \char`\"{}neplodne\_\-dny\char`\"{}, \char`\"{}nic\char`\"{}, \char`\"{}velmi\_\-pl\_\-1\char`\"{}, \char`\"{}ovulace\char`\"{}, \char`\"{}velmi\_\-pl\_\-1\char`\"{}, \char`\"{}nic\char`\"{}, \char`\"{}neplodne\_\-dny\char`\"{}\}
+\item 
+const int \hyperlink{main_8cpp_ac20ac186d802acf86e25dbe89434c5d2}{PCSS} = 8
+\item 
+char $\ast$$\ast$ \hyperlink{namespaceargument_aded18d94674556dc67cde6f133e91b8f}{argument::ar}
+\item 
+int \hyperlink{namespaceargument_a45e1ebfb611bea112e44ab378ab3fd1d}{argument::arc} = 0
+\item 
+int \hyperlink{main_8cpp_a72511454e33f6b0f7c89f9c19813fe90}{kroku} = 0
+\item 
+bool \hyperlink{main_8cpp_adb70e6d0bd82d37bfd1ba53cafb0f2a4}{way} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentace k definicím maker}
+\hypertarget{main_8cpp_adeaccccb6672cb6803865381fc58f738}{
+\index{main.cpp@{main.cpp}!SOUBOR@{SOUBOR}}
+\index{SOUBOR@{SOUBOR}!main.cpp@{main.cpp}}
+\subsubsection[{SOUBOR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SOUBOR~\char`\"{}index.html\char`\"{}}}
+\label{main_8cpp_adeaccccb6672cb6803865381fc58f738}
+
+
+Definice je uvedena na řádku 56 v souboru main.cpp.
+
+
+
+\subsection{Dokumentace funkcí}
+\hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Definice je uvedena na řádku 79 v souboru main.cpp.
+
+\hypertarget{main_8cpp_a23b6929cf0a8d166e0cebc8724dabbd6}{
+\index{main.cpp@{main.cpp}!prikazy@{prikazy}}
+\index{prikazy@{prikazy}!main.cpp@{main.cpp}}
+\subsubsection[{prikazy}]{\setlength{\rightskip}{0pt plus 5cm}void prikazy (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{akt\_\-pozice = {\ttfamily \char`\"{}null\char`\"{}}}
+\end{DoxyParamCaption}
+)}}
+\label{main_8cpp_a23b6929cf0a8d166e0cebc8724dabbd6}
+
+
+prikazy -\/ Příkazy 
+
+Funkce umožní spustit příkazy a zároveň vyvolá určitou funkci pro daný příkaz. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em akt\_\-pozice} & (char $\ast$) sekce. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+(void). 
+\end{DoxyReturn}
+
+
+Definice je uvedena na řádku 136 v souboru main.cpp.
+
+\hypertarget{main_8cpp_a331b96d01231af2856ca537ab7e26ae8}{
+\index{main.cpp@{main.cpp}!volba\_\-m@{volba\_\-m}}
+\index{volba\_\-m@{volba\_\-m}!main.cpp@{main.cpp}}
+\subsubsection[{volba\_\-m}]{\setlength{\rightskip}{0pt plus 5cm}void volba\_\-m (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{page, }
+\item[{bool}]{way = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}
+\label{main_8cpp_a331b96d01231af2856ca537ab7e26ae8}
+
+
+volba\_\-m -\/ Volba měsiční kalendář 
+
+Funkce, která vygeneruje podle příkazu měsiční kalendář (v budoucnu i v minulosti) a vyvolá funkci prikazy. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em page} & (int) Krokování. \\
+\hline
+\mbox{\tt in}  & {\em way} & (bool) \mbox{[}true\mbox{]} vpřed; \mbox{[}false\mbox{]} zpět. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+(void). 
+\end{DoxyReturn}
+
+
+Definice je uvedena na řádku 372 v souboru main.cpp.
+
+\hypertarget{main_8cpp_a1521d8b46bfeb0b3b1e606fdac3f706f}{
+\index{main.cpp@{main.cpp}!volba\_\-mm@{volba\_\-mm}}
+\index{volba\_\-mm@{volba\_\-mm}!main.cpp@{main.cpp}}
+\subsubsection[{volba\_\-mm}]{\setlength{\rightskip}{0pt plus 5cm}void volba\_\-mm (
+\begin{DoxyParamCaption}
+\item[{int}]{kroku, }
+\item[{int}]{den, }
+\item[{int}]{mesic, }
+\item[{int}]{rok, }
+\item[{int}]{cyklus, }
+\item[{int}]{menstruace}
+\end{DoxyParamCaption}
+)}}
+\label{main_8cpp_a1521d8b46bfeb0b3b1e606fdac3f706f}
+
+
+volba\_\-mm -\/ Volba menstruační kalendář 
+
+Funkce, která vygeneruje podle příkazu měsiční kalendář (v budoucnu i v minulosti) a vyvolá funkci prikazy. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em kroku} & (int) Krokování. \\
+\hline
+\mbox{\tt in}  & {\em den} & (int) Den. \\
+\hline
+\mbox{\tt in}  & {\em mesic} & (int) Měsíc. \\
+\hline
+\mbox{\tt in}  & {\em rok} & (int) Rok. \\
+\hline
+\mbox{\tt in}  & {\em cyklus} & (int) Menstruační cyklus \\
+\hline
+\mbox{\tt in}  & {\em menstruace} & (int) Délka menstruace. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+(void). 
+\end{DoxyReturn}
+
+
+Definice je uvedena na řádku 504 v souboru main.cpp.
+
+\hypertarget{main_8cpp_a9f88ec92abe63e972634585300ec4250}{
+\index{main.cpp@{main.cpp}!volba\_\-null@{volba\_\-null}}
+\index{volba\_\-null@{volba\_\-null}!main.cpp@{main.cpp}}
+\subsubsection[{volba\_\-null}]{\setlength{\rightskip}{0pt plus 5cm}void volba\_\-null (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{main_8cpp_a9f88ec92abe63e972634585300ec4250}
+
+
+volba\_\-null -\/ Help 
+
+Funkce, která vypíše sadu příkazu a odkáže se na funkci \hyperlink{main_8cpp_a23b6929cf0a8d166e0cebc8724dabbd6}{prikazy()}. \begin{DoxyReturn}{Návratová hodnota}
+(void). 
+\end{DoxyReturn}
+
+
+Definice je uvedena na řádku 108 v souboru main.cpp.
+
+\hypertarget{main_8cpp_a2f28f1c56e23278e1762193d5f3dd43f}{
+\index{main.cpp@{main.cpp}!volba\_\-s@{volba\_\-s}}
+\index{volba\_\-s@{volba\_\-s}!main.cpp@{main.cpp}}
+\subsubsection[{volba\_\-s}]{\setlength{\rightskip}{0pt plus 5cm}void volba\_\-s (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{main_8cpp_a2f28f1c56e23278e1762193d5f3dd43f}
+\hypertarget{main_8cpp_a69c13a1680bebf5b751ad89d434cffe4}{
+\index{main.cpp@{main.cpp}!volba\_\-t@{volba\_\-t}}
+\index{volba\_\-t@{volba\_\-t}!main.cpp@{main.cpp}}
+\subsubsection[{volba\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}void volba\_\-t (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{page, }
+\item[{bool}]{way = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}
+\label{main_8cpp_a69c13a1680bebf5b751ad89d434cffe4}
+
+
+volba\_\-t -\/ Volba týdenní kalendář 
+
+Funkce, která vygeneruje podle příkazu týdenní kalendář (v budoucnu i v minulosti), vypíše pro každý den svátky a vyvolá funkci \hyperlink{main_8cpp_a23b6929cf0a8d166e0cebc8724dabbd6}{prikazy()}. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em page} & (int) Krokování. \\
+\hline
+\mbox{\tt in}  & {\em way} & (bool) \mbox{[}true\mbox{]} vpřed; \mbox{[}false\mbox{]} zpět. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+(void). 
+\end{DoxyReturn}
+
+
+Definice je uvedena na řádku 457 v souboru main.cpp.
+
+
+
+\subsection{Dokumentace proměnných}
+\hypertarget{main_8cpp_ac6d9cb7f77c1dc7625d1d44a38b6d80c}{
+\index{main.cpp@{main.cpp}!css\_\-class@{css\_\-class}}
+\index{css\_\-class@{css\_\-class}!main.cpp@{main.cpp}}
+\subsubsection[{css\_\-class}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf css\_\-class}\mbox{[}$\,$\mbox{]} = \{\char`\"{}menstruace\char`\"{}, \char`\"{}neplodne\_\-dny\char`\"{}, \char`\"{}nic\char`\"{}, \char`\"{}velmi\_\-pl\_\-1\char`\"{}, \char`\"{}ovulace\char`\"{}, \char`\"{}velmi\_\-pl\_\-1\char`\"{}, \char`\"{}nic\char`\"{}, \char`\"{}neplodne\_\-dny\char`\"{}\}}}
+\label{main_8cpp_ac6d9cb7f77c1dc7625d1d44a38b6d80c}
+
+
+Definice je uvedena na řádku 60 v souboru main.cpp.
+
+\hypertarget{main_8cpp_a72511454e33f6b0f7c89f9c19813fe90}{
+\index{main.cpp@{main.cpp}!kroku@{kroku}}
+\index{kroku@{kroku}!main.cpp@{main.cpp}}
+\subsubsection[{kroku}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf kroku} = 0}}
+\label{main_8cpp_a72511454e33f6b0f7c89f9c19813fe90}
+
+
+Definice je uvedena na řádku 76 v souboru main.cpp.
+
+\hypertarget{main_8cpp_a2a02984adfc3969e3a6b30b44eb65359}{
+\index{main.cpp@{main.cpp}!nazvy\_\-mesicu@{nazvy\_\-mesicu}}
+\index{nazvy\_\-mesicu@{nazvy\_\-mesicu}!main.cpp@{main.cpp}}
+\subsubsection[{nazvy\_\-mesicu}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf nazvy\_\-mesicu}\mbox{[}$\,$\mbox{]} = \{\char`\"{}Leden\char`\"{}, \char`\"{}Únor\char`\"{}, \char`\"{}Březen\char`\"{}, \char`\"{}Duben\char`\"{}, \char`\"{}Květen\char`\"{}, \char`\"{}Červen\char`\"{}, \char`\"{}Červenec\char`\"{}, \char`\"{}Srpen\char`\"{}, \char`\"{}Září\char`\"{}, \char`\"{}Říjen\char`\"{}, \char`\"{}Listopad\char`\"{}, \char`\"{}Prosinec\char`\"{}\}}}
+\label{main_8cpp_a2a02984adfc3969e3a6b30b44eb65359}
+
+
+Definice je uvedena na řádku 59 v souboru main.cpp.
+
+\hypertarget{main_8cpp_ac20ac186d802acf86e25dbe89434c5d2}{
+\index{main.cpp@{main.cpp}!PCSS@{PCSS}}
+\index{PCSS@{PCSS}!main.cpp@{main.cpp}}
+\subsubsection[{PCSS}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf PCSS} = 8}}
+\label{main_8cpp_ac20ac186d802acf86e25dbe89434c5d2}
+
+
+Definice je uvedena na řádku 61 v souboru main.cpp.
+
+\hypertarget{main_8cpp_adb70e6d0bd82d37bfd1ba53cafb0f2a4}{
+\index{main.cpp@{main.cpp}!way@{way}}
+\index{way@{way}!main.cpp@{main.cpp}}
+\subsubsection[{way}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf way} = true}}
+\label{main_8cpp_adb70e6d0bd82d37bfd1ba53cafb0f2a4}
+
+
+Definice je uvedena na řádku 77 v souboru main.cpp.
+
+\hypertarget{main_8cpp_a1510269b55145cbed7de0acdeb3d3764}{
+\index{main.cpp@{main.cpp}!zkratky\_\-dny@{zkratky\_\-dny}}
+\index{zkratky\_\-dny@{zkratky\_\-dny}!main.cpp@{main.cpp}}
+\subsubsection[{zkratky\_\-dny}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf zkratky\_\-dny}\mbox{[}$\,$\mbox{]} = \{\char`\"{}Po\char`\"{}, \char`\"{}Ut\char`\"{}, \char`\"{}St\char`\"{}, \char`\"{}Ct\char`\"{}, \char`\"{}Pa\char`\"{}, \char`\"{}So\char`\"{}, \char`\"{}Ne\char`\"{}\}}}
+\label{main_8cpp_a1510269b55145cbed7de0acdeb3d3764}
+
+
+Definice je uvedena na řádku 58 v souboru main.cpp.
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Kalendář: Zdrojový soubor funkce.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Generováno programem Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Kalendář</div>
+   <div id="projectbrief">Měsíční,_týdenní_a_menstruační_kalendář</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hlavní&#160;stránka</span></a></li>
+      <li><a href="namespaces.html"><span>Prostory&#160;jmen</span></a></li>
+      <li class="current"><a href="files.html"><span>Soubory</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Hledat" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Seznam&#160;souborů</span></a></li>
+      <li><a href="globals.html"><span>Globální&#160;symboly</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>funkce.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="funkce_8h.html">Zobrazit dokumentaci tohoto souboru.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/**</span>
+<a name="l00002"></a>00002 <span class="comment"> *\brief Hlavíčkový soubor.</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> *\details Prototypy funkcí.</span>
+<a name="l00005"></a>00005 <span class="comment"> */</span>
+<a name="l00006"></a>00006 <span class="comment">//#include&lt;string&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00008"></a>00008 <span class="keyword">using namespace </span>std;
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a4fb4d20b69ca004e876ce8415d1575e8" title="prestupny_rok - Přestupný rok">prestupny_rok</a>(<span class="keywordtype">int</span> rok);
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a4b192683b01b2c1c20e4a29ca3f690d0" title="prestupny_rok2 - Přestupný rok 2 (v programu se tato funkce nepoužívá)">prestupny_rok2</a>(<span class="keywordtype">int</span> rok);
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(<span class="keywordtype">int</span> cislo_mesice, <span class="keywordtype">int</span> rok);
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a9ada6b049499d9224c99280cff3249c5" title="nasledujici_mesic - Následující měsíc">nasledujici_mesic</a>(<span class="keywordtype">int</span> cislo_mesice);
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#af32eece35d2e57c1a5c81e3549e2aa94" title="predchozi_mesic - Předchozí měsíc">predchozi_mesic</a>(<span class="keywordtype">int</span> cislo_mesice);
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#af420877d7aaa35fa9f1d005dfeaeef94" title="nasledujici_den - Následující den v týdnu">nasledujici_den</a>(<span class="keywordtype">int</span> cislo_dne);
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#ab15e6e27558b1fdcb0a112a2f8da2058" title="predchozi_den - Předchozí den v týdnu">predchozi_den</a>(<span class="keywordtype">int</span> cislo_dne);
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#ac960d6150c3cb74553b291869f24c12a" title="dnu_v_roce - Dnů v roce">dnu_v_roce</a>(<span class="keywordtype">int</span> rok);
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a22a395db0168561d98e523135bc0388c" title="posun_mesice_roky - Posun měsíce roky">posun_mesice_roky</a>(<span class="keywordtype">int</span> next, <span class="keywordtype">bool</span> smer, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> rok, <span class="keywordtype">int</span> *vystup);
+<a name="l00027"></a>00027 <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#ad11cf0cc5c6e762eef898c945a013762" title="tydenni_posun_mesice_roky - Týdenní posun měsíce roky">tydenni_posun_mesice_roky</a>(<span class="keywordtype">int</span> next, <span class="keywordtype">bool</span> smer, <span class="keywordtype">int</span> den, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> rok, <span class="keywordtype">int</span> *vystup);
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a9f2625c6264f9c5463a005fe92e2a1a5" title="pocet_dnu - Počet dnů">pocet_dnu</a>(<span class="keywordtype">int</span> den, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> rok, <span class="keywordtype">int</span> den2, <span class="keywordtype">int</span> mesic2, <span class="keywordtype">int</span> rok2);
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#afaf22ceb59ae4a1e1ee768180dae2ff0" title="tydenni_generator_dnu - Týdenní generátor dnů">tydenni_generator_dnu</a>(<span class="keywordtype">int</span>, <span class="keywordtype">bool</span>, <span class="keywordtype">int</span> *);
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#a3ed47094c60dfa81f3ee381e663ebd91" title="generator_dnu - Generátor dnů">generator_dnu</a>(<span class="keywordtype">int</span>, <span class="keywordtype">bool</span>, <span class="keywordtype">int</span> *);
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a2df89a0b6c94f41def24d988c1641e77" title="nasledujici_den_v_mesici - Následující den v měsící">nasledujici_den_v_mesici</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a5e181498e6bad45fddd44a5594966f4d" title="predchozi_den_v_mesici - Předchozí den v měsící">predchozi_den_v_mesici</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keywordtype">void</span> <a class="code" href="funkce_8h.html#a1a7cc478c67e4d641f7ccd1014a2d660">posun_data_v_dnech</a>(<span class="keywordtype">bool</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span> *[]);
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#a482f1dd919ac8172659a14e16ee27517" title="vypis_cislo - Výpis číslo">vypis_cislo</a>(<span class="keywordtype">int</span> cislo);
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a1682789e83a853ed4748c1ba91689952" title="den_v_tydnu - Den v týdnu">den_v_tydnu</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#a8d5ee6bd40e126494ea71f902a622222" title="svatky - Svatky">svatky</a>(<span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> den);
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a761312db75ed5f62a0313408b84f62f6" title="comp_str - Compare string">comp_str</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> *, <span class="keywordtype">char</span> <span class="keyword">const</span> *);
+<a name="l00048"></a>00048 <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a761312db75ed5f62a0313408b84f62f6" title="comp_str - Compare string">comp_str</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>);
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a8b6bbdd2a91064925ba4dc3f508b05a6" title="int_dec - Is Integer">int_dec</a>(<span class="keywordtype">char</span> *);
+<a name="l00051"></a>00051 <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a8b6bbdd2a91064925ba4dc3f508b05a6" title="int_dec - Is Integer">int_dec</a>(<span class="keywordtype">string</span>);
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#aae3d727e6451879999785644d6154762" title="split_string - Split String">split_string</a>(<span class="keywordtype">string</span>, vector&lt;string&gt; &amp;);
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#aaaefcf97de62dfc7452f863d83b5fe3b" title="str_to_int - String to integer">str_to_int</a>(<span class="keywordtype">string</span>);
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a72838af8428c327ccf3d8c5bfc8c4a78" title="dalsi_menstruace - Další menstruace">dalsi_menstruace</a>(<span class="keywordtype">int</span> rok, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> den, <span class="keywordtype">int</span> cyklus, <span class="keywordtype">int</span> delka_m, <span class="comment">/*int kroku,*/</span> <span class="keywordtype">int</span> * pole);
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a9bc92ae083ff46a1c9f0d29bd0103e4b" title="krokovani_menstruace - Krokování menstruace">krokovani_menstruace</a>(<span class="keywordtype">int</span> rok, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> den, <span class="keywordtype">int</span> cyklus, <span class="keywordtype">int</span> delka_m, <span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a72511454e33f6b0f7c89f9c19813fe90">kroku</a>, vector &lt;int&gt; &amp;);
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a1c1b3f11c9301d37d0546d06ba33e8bd" title="char_array_to_string_vector - Char string array to string vector">char_array_to_string_vector</a>(<span class="keywordtype">char</span> * [], <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, vector&lt;string&gt; &amp;);
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Vše</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Prostory jmen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Soubory</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkce</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Proměnné</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definice maker</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Generováno ne 18. pro 2011 10.35:15 pro projekt Kalendář programem&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
+</body>
+</html>

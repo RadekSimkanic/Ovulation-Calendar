@@ -1,0 +1,1287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Kalendář: Zdrojový soubor funkce.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Generováno programem Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Kalendář</div>
+   <div id="projectbrief">Měsíční,_týdenní_a_menstruační_kalendář</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hlavní&#160;stránka</span></a></li>
+      <li><a href="namespaces.html"><span>Prostory&#160;jmen</span></a></li>
+      <li class="current"><a href="files.html"><span>Soubory</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Hledat" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Seznam&#160;souborů</span></a></li>
+      <li><a href="globals.html"><span>Globální&#160;symboly</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>funkce.cpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="funkce_8cpp.html">Zobrazit dokumentaci tohoto souboru.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/**</span>
+<a name="l00002"></a>00002 <span class="comment"> *\brief Funkce.</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> *\details Soubor plný užitečných funkcí.</span>
+<a name="l00005"></a>00005 <span class="comment"> */</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="preprocessor">#include&lt;iostream&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include&lt;string&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include&lt;string.h&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include&lt;time.h&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00013"></a>00013 <span class="keyword">using namespace </span>std;
+<a name="l00014"></a>00014 
+<a name="l00015"></a><a class="code" href="funkce_8cpp.html#a95107071b9a25bc8df5074cc44593d81">00015</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a95107071b9a25bc8df5074cc44593d81">pocet_mesicu</a>=12;<span class="comment"></span>
+<a name="l00016"></a>00016 <span class="comment">/**</span>
+<a name="l00017"></a>00017 <span class="comment"> *\brief      Pole se svátky</span>
+<a name="l00018"></a>00018 <span class="comment"> *\details    Pole o velikosti 12 x 31 slouží v tydenním módu pro demonstrování kdy je jaký svátek</span>
+<a name="l00019"></a>00019 <span class="comment"> */</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a><a class="code" href="funkce_8cpp.html#a7381030aaac922903eeca75bd73d068f">00021</a> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="funkce_8cpp.html#a7381030aaac922903eeca75bd73d068f" title="Pole se svátky.">s</a>[<a class="code" href="funkce_8cpp.html#a95107071b9a25bc8df5074cc44593d81">pocet_mesicu</a>][31]=
+<a name="l00022"></a>00022 {
+<a name="l00023"></a>00023     {
+<a name="l00024"></a>00024         <span class="stringliteral">&quot;je Nový rok&quot;</span>,
+<a name="l00025"></a>00025         <span class="stringliteral">&quot;má svátek Karina&quot;</span>,
+<a name="l00026"></a>00026         <span class="stringliteral">&quot;má svátek Radmila&quot;</span>,
+<a name="l00027"></a>00027         <span class="stringliteral">&quot;má svátek Diana&quot;</span>,
+<a name="l00028"></a>00028         <span class="stringliteral">&quot;má svátek Dalimil&quot;</span>,
+<a name="l00029"></a>00029         <span class="stringliteral">&quot;je Tří králů&quot;</span>,
+<a name="l00030"></a>00030         <span class="stringliteral">&quot;má svátek Vilma&quot;</span>,
+<a name="l00031"></a>00031         <span class="stringliteral">&quot;má svátek Čestmír&quot;</span>,
+<a name="l00032"></a>00032         <span class="stringliteral">&quot;má svátek Vladan&quot;</span>,
+<a name="l00033"></a>00033         <span class="stringliteral">&quot;má svátek Břetislav&quot;</span>,
+<a name="l00034"></a>00034         <span class="stringliteral">&quot;má svátek Bohdana&quot;</span>,
+<a name="l00035"></a>00035         <span class="stringliteral">&quot;má svátek Pravoslav&quot;</span>,
+<a name="l00036"></a>00036         <span class="stringliteral">&quot;má svátek Edita&quot;</span>,
+<a name="l00037"></a>00037         <span class="stringliteral">&quot;má svátek Radovan&quot;</span>,
+<a name="l00038"></a>00038         <span class="stringliteral">&quot;má svátek Alice&quot;</span>,
+<a name="l00039"></a>00039         <span class="stringliteral">&quot;má svátek Ctirad&quot;</span>,
+<a name="l00040"></a>00040         <span class="stringliteral">&quot;má svátek Drahoslav&quot;</span>,
+<a name="l00041"></a>00041         <span class="stringliteral">&quot;má svátek Vladislav&quot;</span>,
+<a name="l00042"></a>00042         <span class="stringliteral">&quot;má svátek Doubravka&quot;</span>,
+<a name="l00043"></a>00043         <span class="stringliteral">&quot;má svátek Ilona&quot;</span>,
+<a name="l00044"></a>00044         <span class="stringliteral">&quot;má svátek Běla&quot;</span>,
+<a name="l00045"></a>00045         <span class="stringliteral">&quot;má svátek Slavomír&quot;</span>,
+<a name="l00046"></a>00046         <span class="stringliteral">&quot;má svátek Zdeněk&quot;</span>,
+<a name="l00047"></a>00047         <span class="stringliteral">&quot;má svátek Milena&quot;</span>,
+<a name="l00048"></a>00048         <span class="stringliteral">&quot;má svátek Miloš&quot;</span>,
+<a name="l00049"></a>00049         <span class="stringliteral">&quot;má svátek Zora&quot;</span>,
+<a name="l00050"></a>00050         <span class="stringliteral">&quot;má svátek Ingrid&quot;</span>,
+<a name="l00051"></a>00051         <span class="stringliteral">&quot;má svátek Otýlie&quot;</span>,
+<a name="l00052"></a>00052         <span class="stringliteral">&quot;má svátek Zdislava&quot;</span>,
+<a name="l00053"></a>00053         <span class="stringliteral">&quot;má svátek Robin&quot;</span>,
+<a name="l00054"></a>00054         <span class="stringliteral">&quot;má svátek Marika&quot;</span>
+<a name="l00055"></a>00055     },
+<a name="l00056"></a>00056     {
+<a name="l00057"></a>00057         <span class="stringliteral">&quot;má svátek Hynek&quot;</span>,
+<a name="l00058"></a>00058         <span class="stringliteral">&quot;má svátek Nela&quot;</span>,
+<a name="l00059"></a>00059         <span class="stringliteral">&quot;má svátek Blažej&quot;</span>,
+<a name="l00060"></a>00060         <span class="stringliteral">&quot;má svátek Jarmila&quot;</span>,
+<a name="l00061"></a>00061         <span class="stringliteral">&quot;má svátek Dobromila&quot;</span>,
+<a name="l00062"></a>00062         <span class="stringliteral">&quot;má svátek Vanda&quot;</span>,
+<a name="l00063"></a>00063         <span class="stringliteral">&quot;má svátek Veronika&quot;</span>,
+<a name="l00064"></a>00064         <span class="stringliteral">&quot;má svátek Milada&quot;</span>,
+<a name="l00065"></a>00065         <span class="stringliteral">&quot;má svátek Apolena&quot;</span>,
+<a name="l00066"></a>00066         <span class="stringliteral">&quot;má svátek Mojmír&quot;</span>,
+<a name="l00067"></a>00067         <span class="stringliteral">&quot;má svátek Božena&quot;</span>,
+<a name="l00068"></a>00068         <span class="stringliteral">&quot;má svátek Slavěna&quot;</span>,
+<a name="l00069"></a>00069         <span class="stringliteral">&quot;má svátek Věnceslav&quot;</span>,
+<a name="l00070"></a>00070         <span class="stringliteral">&quot;má svátek Valentýn&quot;</span>,
+<a name="l00071"></a>00071         <span class="stringliteral">&quot;má svátek Jiřina&quot;</span>,
+<a name="l00072"></a>00072         <span class="stringliteral">&quot;má svátek Ljuba&quot;</span>,
+<a name="l00073"></a>00073         <span class="stringliteral">&quot;má svátek Miloslava&quot;</span>,
+<a name="l00074"></a>00074         <span class="stringliteral">&quot;má svátek Gizela&quot;</span>,
+<a name="l00075"></a>00075         <span class="stringliteral">&quot;má svátek Patrik&quot;</span>,
+<a name="l00076"></a>00076         <span class="stringliteral">&quot;má svátek Oldřich&quot;</span>,
+<a name="l00077"></a>00077         <span class="stringliteral">&quot;má svátek Lenka&quot;</span>,
+<a name="l00078"></a>00078         <span class="stringliteral">&quot;má svátek Petr&quot;</span>,
+<a name="l00079"></a>00079         <span class="stringliteral">&quot;má svátek Svatopluk&quot;</span>,
+<a name="l00080"></a>00080         <span class="stringliteral">&quot;má svátek Matěj&quot;</span>,
+<a name="l00081"></a>00081         <span class="stringliteral">&quot;má svátek Liliana&quot;</span>,
+<a name="l00082"></a>00082         <span class="stringliteral">&quot;má svátek Dorota&quot;</span>,
+<a name="l00083"></a>00083         <span class="stringliteral">&quot;má svátek Alexandr&quot;</span>,
+<a name="l00084"></a>00084         <span class="stringliteral">&quot;má svátek Lumír&quot;</span>,
+<a name="l00085"></a>00085         <span class="stringliteral">&quot;má svátek Horymír&quot;</span>
+<a name="l00086"></a>00086     },
+<a name="l00087"></a>00087     {
+<a name="l00088"></a>00088         <span class="stringliteral">&quot;má svátek Bedřich&quot;</span>,
+<a name="l00089"></a>00089         <span class="stringliteral">&quot;má svátek Anežka&quot;</span>,
+<a name="l00090"></a>00090         <span class="stringliteral">&quot;má svátek Kamil&quot;</span>,
+<a name="l00091"></a>00091         <span class="stringliteral">&quot;má svátek Stela&quot;</span>,
+<a name="l00092"></a>00092         <span class="stringliteral">&quot;má svátek Kazimír&quot;</span>,
+<a name="l00093"></a>00093         <span class="stringliteral">&quot;má svátek Miroslav&quot;</span>,
+<a name="l00094"></a>00094         <span class="stringliteral">&quot;má svátek Tomáš&quot;</span>,
+<a name="l00095"></a>00095         <span class="stringliteral">&quot;má svátek Gabriela&quot;</span>,
+<a name="l00096"></a>00096         <span class="stringliteral">&quot;má svátek Františka&quot;</span>,
+<a name="l00097"></a>00097         <span class="stringliteral">&quot;má svátek Viktorie&quot;</span>,
+<a name="l00098"></a>00098         <span class="stringliteral">&quot;má svátek Anděla&quot;</span>,
+<a name="l00099"></a>00099         <span class="stringliteral">&quot;má svátek Řehoř&quot;</span>,
+<a name="l00100"></a>00100         <span class="stringliteral">&quot;má svátek Růžena&quot;</span>,
+<a name="l00101"></a>00101         <span class="stringliteral">&quot;má svátek Matylda a Rút&quot;</span>,
+<a name="l00102"></a>00102         <span class="stringliteral">&quot;má svátek Ida&quot;</span>,
+<a name="l00103"></a>00103         <span class="stringliteral">&quot;má svátek Elena a Herbert&quot;</span>,
+<a name="l00104"></a>00104         <span class="stringliteral">&quot;má svátek Vlastimil&quot;</span>,
+<a name="l00105"></a>00105         <span class="stringliteral">&quot;má svátek Eduard&quot;</span>,
+<a name="l00106"></a>00106         <span class="stringliteral">&quot;má svátek Josef&quot;</span>,
+<a name="l00107"></a>00107         <span class="stringliteral">&quot;má svátek Světlana&quot;</span>,
+<a name="l00108"></a>00108         <span class="stringliteral">&quot;má svátek Radek&quot;</span>,
+<a name="l00109"></a>00109         <span class="stringliteral">&quot;má svátek Leona&quot;</span>,
+<a name="l00110"></a>00110         <span class="stringliteral">&quot;má svátek Ivona&quot;</span>,
+<a name="l00111"></a>00111         <span class="stringliteral">&quot;má svátek Gabriel&quot;</span>,
+<a name="l00112"></a>00112         <span class="stringliteral">&quot;má svátek Marián&quot;</span>,
+<a name="l00113"></a>00113         <span class="stringliteral">&quot;má svátek Emanuel&quot;</span>,
+<a name="l00114"></a>00114         <span class="stringliteral">&quot;má svátek Dita&quot;</span>,
+<a name="l00115"></a>00115         <span class="stringliteral">&quot;má svátek Soňa&quot;</span>,
+<a name="l00116"></a>00116         <span class="stringliteral">&quot;má svátek Taťána&quot;</span>,
+<a name="l00117"></a>00117         <span class="stringliteral">&quot;má svátek Arnošt&quot;</span>,
+<a name="l00118"></a>00118         <span class="stringliteral">&quot;má svátek Kvido&quot;</span>
+<a name="l00119"></a>00119     },
+<a name="l00120"></a>00120     {
+<a name="l00121"></a>00121         <span class="stringliteral">&quot;má svátek Hugo&quot;</span>,
+<a name="l00122"></a>00122         <span class="stringliteral">&quot;má svátek Erika&quot;</span>,
+<a name="l00123"></a>00123         <span class="stringliteral">&quot;má svátek Richard&quot;</span>,
+<a name="l00124"></a>00124         <span class="stringliteral">&quot;má svátek Ivana&quot;</span>,
+<a name="l00125"></a>00125         <span class="stringliteral">&quot;má svátek Miroslava&quot;</span>,
+<a name="l00126"></a>00126         <span class="stringliteral">&quot;má svátek Vendula&quot;</span>,
+<a name="l00127"></a>00127         <span class="stringliteral">&quot;má svátek Hermína&quot;</span>,
+<a name="l00128"></a>00128         <span class="stringliteral">&quot;má svátek Ema&quot;</span>,
+<a name="l00129"></a>00129         <span class="stringliteral">&quot;má svátek Dušan&quot;</span>,
+<a name="l00130"></a>00130         <span class="stringliteral">&quot;má svátek Darja&quot;</span>,
+<a name="l00131"></a>00131         <span class="stringliteral">&quot;má svátek Izabela&quot;</span>,
+<a name="l00132"></a>00132         <span class="stringliteral">&quot;má svátek Julius&quot;</span>,
+<a name="l00133"></a>00133         <span class="stringliteral">&quot;má svátek Aleš&quot;</span>,
+<a name="l00134"></a>00134         <span class="stringliteral">&quot;má svátek Vincenc&quot;</span>,
+<a name="l00135"></a>00135         <span class="stringliteral">&quot;má svátek Anastázie&quot;</span>,
+<a name="l00136"></a>00136         <span class="stringliteral">&quot;má svátek Irena&quot;</span>,
+<a name="l00137"></a>00137         <span class="stringliteral">&quot;má svátek Rudolf&quot;</span>,
+<a name="l00138"></a>00138         <span class="stringliteral">&quot;má svátek Valérie&quot;</span>,
+<a name="l00139"></a>00139         <span class="stringliteral">&quot;má svátek Rostislav&quot;</span>,
+<a name="l00140"></a>00140         <span class="stringliteral">&quot;má svátek Marcela&quot;</span>,
+<a name="l00141"></a>00141         <span class="stringliteral">&quot;má svátek Alexandra&quot;</span>,
+<a name="l00142"></a>00142         <span class="stringliteral">&quot;má svátek Evžénie&quot;</span>,
+<a name="l00143"></a>00143         <span class="stringliteral">&quot;má svátek Vojtěch&quot;</span>,
+<a name="l00144"></a>00144         <span class="stringliteral">&quot;má svátek Jiří&quot;</span>,
+<a name="l00145"></a>00145         <span class="stringliteral">&quot;má svátek Marek&quot;</span>,
+<a name="l00146"></a>00146         <span class="stringliteral">&quot;má svátek Oto&quot;</span>,
+<a name="l00147"></a>00147         <span class="stringliteral">&quot;má svátek Jaroslav&quot;</span>,
+<a name="l00148"></a>00148         <span class="stringliteral">&quot;má svátek Vlastislav&quot;</span>,
+<a name="l00149"></a>00149         <span class="stringliteral">&quot;má svátek Robert&quot;</span>,
+<a name="l00150"></a>00150         <span class="stringliteral">&quot;má svátek Blahoslav&quot;</span>
+<a name="l00151"></a>00151     },
+<a name="l00152"></a>00152     {
+<a name="l00153"></a>00153         <span class="stringliteral">&quot;je Svátek práce&quot;</span>,
+<a name="l00154"></a>00154         <span class="stringliteral">&quot;má svátek Zikmund&quot;</span>,
+<a name="l00155"></a>00155         <span class="stringliteral">&quot;má svátek Alexej&quot;</span>,
+<a name="l00156"></a>00156         <span class="stringliteral">&quot;má svátek Květoslav&quot;</span>,
+<a name="l00157"></a>00157         <span class="stringliteral">&quot;má svátek Klaudie&quot;</span>,
+<a name="l00158"></a>00158         <span class="stringliteral">&quot;má svátek Radoslav&quot;</span>,
+<a name="l00159"></a>00159         <span class="stringliteral">&quot;má svátek Stanislav&quot;</span>,
+<a name="l00160"></a>00160         <span class="stringliteral">&quot;je Statní svátek - Den vítězství&quot;</span>,
+<a name="l00161"></a>00161         <span class="stringliteral">&quot;má svátek Ctibor&quot;</span>,
+<a name="l00162"></a>00162         <span class="stringliteral">&quot;má svátek Blažena&quot;</span>,
+<a name="l00163"></a>00163         <span class="stringliteral">&quot;má svátek Svatava&quot;</span>,
+<a name="l00164"></a>00164         <span class="stringliteral">&quot;má svátek Pankrác&quot;</span>,
+<a name="l00165"></a>00165         <span class="stringliteral">&quot;má svátek Servác&quot;</span>,
+<a name="l00166"></a>00166         <span class="stringliteral">&quot;má svátek Bonifác&quot;</span>,
+<a name="l00167"></a>00167         <span class="stringliteral">&quot;má svátek Žofie&quot;</span>,
+<a name="l00168"></a>00168         <span class="stringliteral">&quot;má svátek Přemysl&quot;</span>,
+<a name="l00169"></a>00169         <span class="stringliteral">&quot;má svátek Aneta&quot;</span>,
+<a name="l00170"></a>00170         <span class="stringliteral">&quot;má svátek Nataša&quot;</span>,
+<a name="l00171"></a>00171         <span class="stringliteral">&quot;má svátek Ivo&quot;</span>,
+<a name="l00172"></a>00172         <span class="stringliteral">&quot;má svátek Zbyšek&quot;</span>,
+<a name="l00173"></a>00173         <span class="stringliteral">&quot;má svátek Monika&quot;</span>,
+<a name="l00174"></a>00174         <span class="stringliteral">&quot;má svátek Emil&quot;</span>,
+<a name="l00175"></a>00175         <span class="stringliteral">&quot;má svátek Vladimír&quot;</span>,
+<a name="l00176"></a>00176         <span class="stringliteral">&quot;má svátek Jana&quot;</span>,
+<a name="l00177"></a>00177         <span class="stringliteral">&quot;má svátek Viola&quot;</span>,
+<a name="l00178"></a>00178         <span class="stringliteral">&quot;má svátek Filip&quot;</span>,
+<a name="l00179"></a>00179         <span class="stringliteral">&quot;má svátek Valdemar&quot;</span>,
+<a name="l00180"></a>00180         <span class="stringliteral">&quot;má svátek Vilém&quot;</span>,
+<a name="l00181"></a>00181         <span class="stringliteral">&quot;má svátek Maxim&quot;</span>,
+<a name="l00182"></a>00182         <span class="stringliteral">&quot;má svátek Ferdinand&quot;</span>,
+<a name="l00183"></a>00183         <span class="stringliteral">&quot;má svátek Kamila&quot;</span>
+<a name="l00184"></a>00184     },
+<a name="l00185"></a>00185     {
+<a name="l00186"></a>00186         <span class="stringliteral">&quot;má svátek Laura&quot;</span>,
+<a name="l00187"></a>00187         <span class="stringliteral">&quot;má svátek Jarmil&quot;</span>,
+<a name="l00188"></a>00188         <span class="stringliteral">&quot;má svátek Tamara&quot;</span>,
+<a name="l00189"></a>00189         <span class="stringliteral">&quot;má svátek Dalibor&quot;</span>,
+<a name="l00190"></a>00190         <span class="stringliteral">&quot;má svátek Dobroslav&quot;</span>,
+<a name="l00191"></a>00191         <span class="stringliteral">&quot;má svátek Norbert&quot;</span>,
+<a name="l00192"></a>00192         <span class="stringliteral">&quot;má svátek Iveta&quot;</span>,
+<a name="l00193"></a>00193         <span class="stringliteral">&quot;má svátek Medard&quot;</span>,
+<a name="l00194"></a>00194         <span class="stringliteral">&quot;má svátek Stanislava&quot;</span>,
+<a name="l00195"></a>00195         <span class="stringliteral">&quot;má svátek Gita&quot;</span>,
+<a name="l00196"></a>00196         <span class="stringliteral">&quot;má svátek Bruno&quot;</span>,
+<a name="l00197"></a>00197         <span class="stringliteral">&quot;má svátek Antonie&quot;</span>,
+<a name="l00198"></a>00198         <span class="stringliteral">&quot;má svátek Antonín&quot;</span>,
+<a name="l00199"></a>00199         <span class="stringliteral">&quot;má svátek Roland&quot;</span>,
+<a name="l00200"></a>00200         <span class="stringliteral">&quot;má svátek Vít&quot;</span>,
+<a name="l00201"></a>00201         <span class="stringliteral">&quot;má svátek Zbyněk&quot;</span>,
+<a name="l00202"></a>00202         <span class="stringliteral">&quot;má svátek Adolf&quot;</span>,
+<a name="l00203"></a>00203         <span class="stringliteral">&quot;má svátek Milan&quot;</span>,
+<a name="l00204"></a>00204         <span class="stringliteral">&quot;má svátek Leoš&quot;</span>,
+<a name="l00205"></a>00205         <span class="stringliteral">&quot;má svátek Květa&quot;</span>,
+<a name="l00206"></a>00206         <span class="stringliteral">&quot;má svátek Alois&quot;</span>,
+<a name="l00207"></a>00207         <span class="stringliteral">&quot;má svátek Pavla&quot;</span>,
+<a name="l00208"></a>00208         <span class="stringliteral">&quot;má svátek Zdeňka&quot;</span>,
+<a name="l00209"></a>00209         <span class="stringliteral">&quot;má svátek Jan&quot;</span>,
+<a name="l00210"></a>00210         <span class="stringliteral">&quot;má svátek Ivan&quot;</span>,
+<a name="l00211"></a>00211         <span class="stringliteral">&quot;má svátek Adriana&quot;</span>,
+<a name="l00212"></a>00212         <span class="stringliteral">&quot;má svátek Ladislav&quot;</span>,
+<a name="l00213"></a>00213         <span class="stringliteral">&quot;má svátek Lubomír&quot;</span>,
+<a name="l00214"></a>00214         <span class="stringliteral">&quot;má svátek Petr a Pavel&quot;</span>,
+<a name="l00215"></a>00215         <span class="stringliteral">&quot;má svátek Šárka&quot;</span>
+<a name="l00216"></a>00216     },
+<a name="l00217"></a>00217     {
+<a name="l00218"></a>00218         <span class="stringliteral">&quot;má svátek Jaroslava&quot;</span>,
+<a name="l00219"></a>00219         <span class="stringliteral">&quot;má svátek Patricie&quot;</span>,
+<a name="l00220"></a>00220         <span class="stringliteral">&quot;má svátek Radomír&quot;</span>,
+<a name="l00221"></a>00221         <span class="stringliteral">&quot;má svátek Prokop&quot;</span>,
+<a name="l00222"></a>00222         <span class="stringliteral">&quot;je Státní svátek - Cyril a Metoděj, má svátek Cyril a Metoděj&quot;</span>,
+<a name="l00223"></a>00223         <span class="stringliteral">&quot;je Státní svátek - Mistr Jan Hus&quot;</span>,
+<a name="l00224"></a>00224         <span class="stringliteral">&quot;má svátek Bohuslava&quot;</span>,
+<a name="l00225"></a>00225         <span class="stringliteral">&quot;má svátek Nora&quot;</span>,
+<a name="l00226"></a>00226         <span class="stringliteral">&quot;má svátek Drahoslava&quot;</span>,
+<a name="l00227"></a>00227         <span class="stringliteral">&quot;má svátek Libuše&quot;</span>,
+<a name="l00228"></a>00228         <span class="stringliteral">&quot;má svátek Olga&quot;</span>,
+<a name="l00229"></a>00229         <span class="stringliteral">&quot;má svátek Bořek&quot;</span>,
+<a name="l00230"></a>00230         <span class="stringliteral">&quot;má svátek Markéta&quot;</span>,
+<a name="l00231"></a>00231         <span class="stringliteral">&quot;má svátek Karolína&quot;</span>,
+<a name="l00232"></a>00232         <span class="stringliteral">&quot;má svátek Jindřich&quot;</span>,
+<a name="l00233"></a>00233         <span class="stringliteral">&quot;má svátek Luboš&quot;</span>,
+<a name="l00234"></a>00234         <span class="stringliteral">&quot;má svátek Martina&quot;</span>,
+<a name="l00235"></a>00235         <span class="stringliteral">&quot;má svátek Drahomíra&quot;</span>,
+<a name="l00236"></a>00236         <span class="stringliteral">&quot;má svátek Čeněk&quot;</span>,
+<a name="l00237"></a>00237         <span class="stringliteral">&quot;má svátek Ilja&quot;</span>,
+<a name="l00238"></a>00238         <span class="stringliteral">&quot;má svátek Vítězslav&quot;</span>,
+<a name="l00239"></a>00239         <span class="stringliteral">&quot;má svátek Magdaléna&quot;</span>,
+<a name="l00240"></a>00240         <span class="stringliteral">&quot;má svátek Libor&quot;</span>,
+<a name="l00241"></a>00241         <span class="stringliteral">&quot;má svátek Kristýna&quot;</span>,
+<a name="l00242"></a>00242         <span class="stringliteral">&quot;má svátek Jakub&quot;</span>,
+<a name="l00243"></a>00243         <span class="stringliteral">&quot;má svátek Anna&quot;</span>,
+<a name="l00244"></a>00244         <span class="stringliteral">&quot;má svátek Věroslav&quot;</span>,
+<a name="l00245"></a>00245         <span class="stringliteral">&quot;má svátek Viktor&quot;</span>,
+<a name="l00246"></a>00246         <span class="stringliteral">&quot;má svátek Marta&quot;</span>,
+<a name="l00247"></a>00247         <span class="stringliteral">&quot;má svátek Bořivoj&quot;</span>,
+<a name="l00248"></a>00248         <span class="stringliteral">&quot;má svátek Ignác&quot;</span>
+<a name="l00249"></a>00249     },
+<a name="l00250"></a>00250     {
+<a name="l00251"></a>00251         <span class="stringliteral">&quot;má svátek Oskar&quot;</span>,
+<a name="l00252"></a>00252         <span class="stringliteral">&quot;má svátek Gustav&quot;</span>,
+<a name="l00253"></a>00253         <span class="stringliteral">&quot;má svátek Miluše&quot;</span>,
+<a name="l00254"></a>00254         <span class="stringliteral">&quot;má svátek Dominik&quot;</span>,
+<a name="l00255"></a>00255         <span class="stringliteral">&quot;má svátek Kristián&quot;</span>,
+<a name="l00256"></a>00256         <span class="stringliteral">&quot;má svátek Oldřiška&quot;</span>,
+<a name="l00257"></a>00257         <span class="stringliteral">&quot;má svátek Lada&quot;</span>,
+<a name="l00258"></a>00258         <span class="stringliteral">&quot;má svátek Soběslav&quot;</span>,
+<a name="l00259"></a>00259         <span class="stringliteral">&quot;má svátek Roman&quot;</span>,
+<a name="l00260"></a>00260         <span class="stringliteral">&quot;má svátek Vavřinec&quot;</span>,
+<a name="l00261"></a>00261         <span class="stringliteral">&quot;má svátek Zuzana&quot;</span>,
+<a name="l00262"></a>00262         <span class="stringliteral">&quot;má svátek Klára&quot;</span>,
+<a name="l00263"></a>00263         <span class="stringliteral">&quot;má svátek Alena&quot;</span>,
+<a name="l00264"></a>00264         <span class="stringliteral">&quot;má svátek Alan&quot;</span>,
+<a name="l00265"></a>00265         <span class="stringliteral">&quot;má svátek Hana&quot;</span>,
+<a name="l00266"></a>00266         <span class="stringliteral">&quot;má svátek Jáchym&quot;</span>,
+<a name="l00267"></a>00267         <span class="stringliteral">&quot;má svátek Petra&quot;</span>,
+<a name="l00268"></a>00268         <span class="stringliteral">&quot;má svátek Helena&quot;</span>,
+<a name="l00269"></a>00269         <span class="stringliteral">&quot;má svátek Ludvík&quot;</span>,
+<a name="l00270"></a>00270         <span class="stringliteral">&quot;má svátek Bernard&quot;</span>,
+<a name="l00271"></a>00271         <span class="stringliteral">&quot;má svátek Johana&quot;</span>,
+<a name="l00272"></a>00272         <span class="stringliteral">&quot;má svátek Bohuslav&quot;</span>,
+<a name="l00273"></a>00273         <span class="stringliteral">&quot;má svátek Sandra&quot;</span>,
+<a name="l00274"></a>00274         <span class="stringliteral">&quot;má svátek Bartoloměj&quot;</span>,
+<a name="l00275"></a>00275         <span class="stringliteral">&quot;má svátek Radim&quot;</span>,
+<a name="l00276"></a>00276         <span class="stringliteral">&quot;má svátek Luděk&quot;</span>,
+<a name="l00277"></a>00277         <span class="stringliteral">&quot;má svátek Otakar&quot;</span>,
+<a name="l00278"></a>00278         <span class="stringliteral">&quot;má svátek Augustýn&quot;</span>,
+<a name="l00279"></a>00279         <span class="stringliteral">&quot;má svátek Evelína&quot;</span>,
+<a name="l00280"></a>00280         <span class="stringliteral">&quot;má svátek Vladěna&quot;</span>,
+<a name="l00281"></a>00281         <span class="stringliteral">&quot;má svátek Pavlína&quot;</span>
+<a name="l00282"></a>00282     },
+<a name="l00283"></a>00283     {
+<a name="l00284"></a>00284         <span class="stringliteral">&quot;má svátek Linda a Samuel&quot;</span>,
+<a name="l00285"></a>00285         <span class="stringliteral">&quot;má svátek Adéla&quot;</span>,
+<a name="l00286"></a>00286         <span class="stringliteral">&quot;má svátek Bronislav&quot;</span>,
+<a name="l00287"></a>00287         <span class="stringliteral">&quot;má svátek Jindřiška&quot;</span>,
+<a name="l00288"></a>00288         <span class="stringliteral">&quot;má svátek Boris&quot;</span>,
+<a name="l00289"></a>00289         <span class="stringliteral">&quot;má svátek Boleslav&quot;</span>,
+<a name="l00290"></a>00290         <span class="stringliteral">&quot;má svátek Regína&quot;</span>,
+<a name="l00291"></a>00291         <span class="stringliteral">&quot;má svátek Mariana&quot;</span>,
+<a name="l00292"></a>00292         <span class="stringliteral">&quot;má svátek Daniela&quot;</span>,
+<a name="l00293"></a>00293         <span class="stringliteral">&quot;má svátek Irma&quot;</span>,
+<a name="l00294"></a>00294         <span class="stringliteral">&quot;má svátek Denisa&quot;</span>,
+<a name="l00295"></a>00295         <span class="stringliteral">&quot;má svátek Marie&quot;</span>,
+<a name="l00296"></a>00296         <span class="stringliteral">&quot;má svátek Lubor&quot;</span>,
+<a name="l00297"></a>00297         <span class="stringliteral">&quot;má svátek Radka&quot;</span>,
+<a name="l00298"></a>00298         <span class="stringliteral">&quot;má svátek Jolana&quot;</span>,
+<a name="l00299"></a>00299         <span class="stringliteral">&quot;má svátek Ludmila&quot;</span>,
+<a name="l00300"></a>00300         <span class="stringliteral">&quot;má svátek Naděžda&quot;</span>,
+<a name="l00301"></a>00301         <span class="stringliteral">&quot;má svátek Kryštof&quot;</span>,
+<a name="l00302"></a>00302         <span class="stringliteral">&quot;má svátek Zita&quot;</span>,
+<a name="l00303"></a>00303         <span class="stringliteral">&quot;má svátek Oleg&quot;</span>,
+<a name="l00304"></a>00304         <span class="stringliteral">&quot;má svátek Matouš&quot;</span>,
+<a name="l00305"></a>00305         <span class="stringliteral">&quot;má svátek Darina&quot;</span>,
+<a name="l00306"></a>00306         <span class="stringliteral">&quot;má svátek Berta&quot;</span>,
+<a name="l00307"></a>00307         <span class="stringliteral">&quot;má svátek Jaromír&quot;</span>,
+<a name="l00308"></a>00308         <span class="stringliteral">&quot;má svátek Zlata&quot;</span>,
+<a name="l00309"></a>00309         <span class="stringliteral">&quot;má svátek Andrea&quot;</span>,
+<a name="l00310"></a>00310         <span class="stringliteral">&quot;má svátek Jonáš&quot;</span>,
+<a name="l00311"></a>00311         <span class="stringliteral">&quot;má svátek Václav&quot;</span>,
+<a name="l00312"></a>00312         <span class="stringliteral">&quot;má svátek Michal&quot;</span>,
+<a name="l00313"></a>00313         <span class="stringliteral">&quot;má svátek Jeroným&quot;</span>
+<a name="l00314"></a>00314     },
+<a name="l00315"></a>00315     {
+<a name="l00316"></a>00316         <span class="stringliteral">&quot;má svátek Igor&quot;</span>,
+<a name="l00317"></a>00317         <span class="stringliteral">&quot;má svátek Olívie a Oliver&quot;</span>,
+<a name="l00318"></a>00318         <span class="stringliteral">&quot;má svátek Bohumil&quot;</span>,
+<a name="l00319"></a>00319         <span class="stringliteral">&quot;má svátek František&quot;</span>,
+<a name="l00320"></a>00320         <span class="stringliteral">&quot;má svátek Eliška&quot;</span>,
+<a name="l00321"></a>00321         <span class="stringliteral">&quot;má svátek Hanuš&quot;</span>,
+<a name="l00322"></a>00322         <span class="stringliteral">&quot;má svátek Justýna&quot;</span>,
+<a name="l00323"></a>00323         <span class="stringliteral">&quot;má svátek Věra&quot;</span>,
+<a name="l00324"></a>00324         <span class="stringliteral">&quot;má svátek Sára a Štefan&quot;</span>,
+<a name="l00325"></a>00325         <span class="stringliteral">&quot;má svátek Marina&quot;</span>,
+<a name="l00326"></a>00326         <span class="stringliteral">&quot;má svátek Andrej&quot;</span>,
+<a name="l00327"></a>00327         <span class="stringliteral">&quot;má svátek Marcel&quot;</span>,
+<a name="l00328"></a>00328         <span class="stringliteral">&quot;má svátek Renáta&quot;</span>,
+<a name="l00329"></a>00329         <span class="stringliteral">&quot;má svátek Agáta&quot;</span>,
+<a name="l00330"></a>00330         <span class="stringliteral">&quot;má svátek Tereza&quot;</span>,
+<a name="l00331"></a>00331         <span class="stringliteral">&quot;má svátek Havel&quot;</span>,
+<a name="l00332"></a>00332         <span class="stringliteral">&quot;má svátek Hedvika&quot;</span>,
+<a name="l00333"></a>00333         <span class="stringliteral">&quot;má svátek Lukáš&quot;</span>,
+<a name="l00334"></a>00334         <span class="stringliteral">&quot;má svátek Michaela&quot;</span>,
+<a name="l00335"></a>00335         <span class="stringliteral">&quot;má svátek Vendelín&quot;</span>,
+<a name="l00336"></a>00336         <span class="stringliteral">&quot;má svátek Brigita&quot;</span>,
+<a name="l00337"></a>00337         <span class="stringliteral">&quot;má svátek Sabina&quot;</span>,
+<a name="l00338"></a>00338         <span class="stringliteral">&quot;má svátek Teodor&quot;</span>,
+<a name="l00339"></a>00339         <span class="stringliteral">&quot;má svátek Nina&quot;</span>,
+<a name="l00340"></a>00340         <span class="stringliteral">&quot;má svátek Beáta&quot;</span>,
+<a name="l00341"></a>00341         <span class="stringliteral">&quot;má svátek Erik&quot;</span>,
+<a name="l00342"></a>00342         <span class="stringliteral">&quot;má svátek Šarlota&quot;</span>,
+<a name="l00343"></a>00343         <span class="stringliteral">&quot;je Státní svátek&quot;</span>,
+<a name="l00344"></a>00344         <span class="stringliteral">&quot;má svátek Silvie&quot;</span>,
+<a name="l00345"></a>00345         <span class="stringliteral">&quot;má svátek Tadeáš&quot;</span>,
+<a name="l00346"></a>00346         <span class="stringliteral">&quot;má svátek Štěpánka&quot;</span>
+<a name="l00347"></a>00347     },
+<a name="l00348"></a>00348     {
+<a name="l00349"></a>00349         <span class="stringliteral">&quot;má svátek Felix&quot;</span>,
+<a name="l00350"></a>00350         <span class="stringliteral">&quot;je Památka zesnulých&quot;</span>,
+<a name="l00351"></a>00351         <span class="stringliteral">&quot;má svátek Hubert&quot;</span>,
+<a name="l00352"></a>00352         <span class="stringliteral">&quot;má svátek Karel&quot;</span>,
+<a name="l00353"></a>00353         <span class="stringliteral">&quot;má svátek Miriam&quot;</span>,
+<a name="l00354"></a>00354         <span class="stringliteral">&quot;má svátek Liběna&quot;</span>,
+<a name="l00355"></a>00355         <span class="stringliteral">&quot;má svátek Saskie&quot;</span>,
+<a name="l00356"></a>00356         <span class="stringliteral">&quot;má svátek Bohumír&quot;</span>,
+<a name="l00357"></a>00357         <span class="stringliteral">&quot;má svátek Bohdan&quot;</span>,
+<a name="l00358"></a>00358         <span class="stringliteral">&quot;má svátek Evžen&quot;</span>,
+<a name="l00359"></a>00359         <span class="stringliteral">&quot;má svátek Martin&quot;</span>,
+<a name="l00360"></a>00360         <span class="stringliteral">&quot;má svátek Benedikt&quot;</span>,
+<a name="l00361"></a>00361         <span class="stringliteral">&quot;má svátek Tibor&quot;</span>,
+<a name="l00362"></a>00362         <span class="stringliteral">&quot;má svátek Sáva&quot;</span>,
+<a name="l00363"></a>00363         <span class="stringliteral">&quot;má svátek Leopold&quot;</span>,
+<a name="l00364"></a>00364         <span class="stringliteral">&quot;má svátek Otmar&quot;</span>,
+<a name="l00365"></a>00365         <span class="stringliteral">&quot;má svátek Mahuléna&quot;</span>,
+<a name="l00366"></a>00366         <span class="stringliteral">&quot;má svátek Romana&quot;</span>,
+<a name="l00367"></a>00367         <span class="stringliteral">&quot;má svátek Alžběta&quot;</span>,
+<a name="l00368"></a>00368         <span class="stringliteral">&quot;má svátek Nikola&quot;</span>,
+<a name="l00369"></a>00369         <span class="stringliteral">&quot;má svátek Albert&quot;</span>,
+<a name="l00370"></a>00370         <span class="stringliteral">&quot;má svátek Cecílie&quot;</span>,
+<a name="l00371"></a>00371         <span class="stringliteral">&quot;má svátek Klement&quot;</span>,
+<a name="l00372"></a>00372         <span class="stringliteral">&quot;má svátek Emílie&quot;</span>,
+<a name="l00373"></a>00373         <span class="stringliteral">&quot;má svátek Kateřina&quot;</span>,
+<a name="l00374"></a>00374         <span class="stringliteral">&quot;má svátek Artur&quot;</span>,
+<a name="l00375"></a>00375         <span class="stringliteral">&quot;má svátek Xenie&quot;</span>,
+<a name="l00376"></a>00376         <span class="stringliteral">&quot;má svátek René&quot;</span>,
+<a name="l00377"></a>00377         <span class="stringliteral">&quot;má svátek Zina&quot;</span>,
+<a name="l00378"></a>00378         <span class="stringliteral">&quot;má svátek Ondřej&quot;</span>
+<a name="l00379"></a>00379     },
+<a name="l00380"></a>00380     {
+<a name="l00381"></a>00381         <span class="stringliteral">&quot;má svátek Iva&quot;</span>,
+<a name="l00382"></a>00382         <span class="stringliteral">&quot;má svátek Blanka&quot;</span>,
+<a name="l00383"></a>00383         <span class="stringliteral">&quot;má svátek Svatoslav&quot;</span>,
+<a name="l00384"></a>00384         <span class="stringliteral">&quot;má svátek Barbora&quot;</span>,
+<a name="l00385"></a>00385         <span class="stringliteral">&quot;má svátek Jitka&quot;</span>,
+<a name="l00386"></a>00386         <span class="stringliteral">&quot;má svátek Mikuláš&quot;</span>,
+<a name="l00387"></a>00387         <span class="stringliteral">&quot;má svátek Ambrož&quot;</span>,
+<a name="l00388"></a>00388         <span class="stringliteral">&quot;má svátek Květoslava&quot;</span>,
+<a name="l00389"></a>00389         <span class="stringliteral">&quot;má svátek Vratislav&quot;</span>,
+<a name="l00390"></a>00390         <span class="stringliteral">&quot;má svátek Julie&quot;</span>,
+<a name="l00391"></a>00391         <span class="stringliteral">&quot;má svátek Dana&quot;</span>,
+<a name="l00392"></a>00392         <span class="stringliteral">&quot;má svátek Simona&quot;</span>,
+<a name="l00393"></a>00393         <span class="stringliteral">&quot;má svátek Lucie&quot;</span>,
+<a name="l00394"></a>00394         <span class="stringliteral">&quot;má svátek Lýdie&quot;</span>,
+<a name="l00395"></a>00395         <span class="stringliteral">&quot;má svátek Radana&quot;</span>,
+<a name="l00396"></a>00396         <span class="stringliteral">&quot;má svátek Albína&quot;</span>,
+<a name="l00397"></a>00397         <span class="stringliteral">&quot;má svátek Daniel&quot;</span>,
+<a name="l00398"></a>00398         <span class="stringliteral">&quot;má svátek Miloslav&quot;</span>,
+<a name="l00399"></a>00399         <span class="stringliteral">&quot;má svátek Ester&quot;</span>,
+<a name="l00400"></a>00400         <span class="stringliteral">&quot;má svátek Dagmar&quot;</span>,
+<a name="l00401"></a>00401         <span class="stringliteral">&quot;má svátek Natálie&quot;</span>,
+<a name="l00402"></a>00402         <span class="stringliteral">&quot;má svátek Šimon&quot;</span>,
+<a name="l00403"></a>00403         <span class="stringliteral">&quot;má svátek Vlasta&quot;</span>,
+<a name="l00404"></a>00404         <span class="stringliteral">&quot;je Štědrý den, má svátek Adam a Eva&quot;</span>,
+<a name="l00405"></a>00405         <span class="stringliteral">&quot;je 1.svátek vánoční&quot;</span>,
+<a name="l00406"></a>00406         <span class="stringliteral">&quot;je 2. svátek vánoční, má svátek Štěpán&quot;</span>,
+<a name="l00407"></a>00407         <span class="stringliteral">&quot;má svátek Žaneta&quot;</span>,
+<a name="l00408"></a>00408         <span class="stringliteral">&quot;má svátek Bohumila&quot;</span>,
+<a name="l00409"></a>00409         <span class="stringliteral">&quot;má svátek Judita&quot;</span>,
+<a name="l00410"></a>00410         <span class="stringliteral">&quot;má svátek David&quot;</span>,
+<a name="l00411"></a>00411         <span class="stringliteral">&quot;má svátek Silvestr&quot;</span>
+<a name="l00412"></a>00412     }
+<a name="l00413"></a>00413 };
+<a name="l00414"></a>00414 
+<a name="l00415"></a>00415 
+<a name="l00416"></a>00416 
+<a name="l00417"></a>00417 
+<a name="l00418"></a>00418 <span class="comment"></span>
+<a name="l00419"></a>00419 <span class="comment">/**</span>
+<a name="l00420"></a>00420 <span class="comment"> *\brief                prestupny_rok - Přestupný rok</span>
+<a name="l00421"></a>00421 <span class="comment"> *\details              Funkce, která ověří klasickými způsoby zda daný rok je přestupný.</span>
+<a name="l00422"></a>00422 <span class="comment"> *\param[in]    rok     (int) Číslo roku k ověření.</span>
+<a name="l00423"></a>00423 <span class="comment"> *\return               (bool) [true] přestupný; [false] nepřestupný</span>
+<a name="l00424"></a>00424 <span class="comment"> */</span>
+<a name="l00425"></a><a class="code" href="funkce_8h.html#a4fb4d20b69ca004e876ce8415d1575e8">00425</a> <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a4fb4d20b69ca004e876ce8415d1575e8" title="prestupny_rok - Přestupný rok">prestupny_rok</a>(<span class="keywordtype">int</span> rok){ <span class="comment">//v gregorianském kalendáři nastáva chyba a to: každých 2620 let schází 1 den - dalo by se to podle mě vyřešit tak že následující rok by byl také přestupný, ale tak že by únor měl 30 případně 29 dní místo 29 či 28 - pouze by se přidál jeden den</span>
+<a name="l00426"></a>00426     <span class="keywordtype">bool</span> bool_v=<span class="keyword">false</span>;
+<a name="l00427"></a>00427     <span class="keywordflow">if</span> (rok % 4 == 0){
+<a name="l00428"></a>00428                 bool_v = <span class="keyword">true</span>;
+<a name="l00429"></a>00429                 <span class="keywordflow">if</span> (rok % 100 == 0 &amp;&amp; rok % 400 == 0){
+<a name="l00430"></a>00430                         bool_v = <span class="keyword">true</span>;
+<a name="l00431"></a>00431                 }
+<a name="l00432"></a>00432                 <span class="keywordflow">else</span>{
+<a name="l00433"></a>00433             <span class="keywordflow">if</span> (rok % 100 == 0 &amp;&amp; rok % 400 != 0)
+<a name="l00434"></a>00434                 bool_v = <span class="keyword">false</span>;
+<a name="l00435"></a>00435                 }
+<a name="l00436"></a>00436         }
+<a name="l00437"></a>00437     <span class="keywordflow">return</span> bool_v;
+<a name="l00438"></a>00438 }
+<a name="l00439"></a>00439 <span class="comment"></span>
+<a name="l00440"></a>00440 <span class="comment">/**</span>
+<a name="l00441"></a>00441 <span class="comment"> *\brief                prestupny_rok2 - Přestupný rok 2 (v programu se tato funkce nepoužívá)</span>
+<a name="l00442"></a>00442 <span class="comment"> *\details              Funkce, která ověří zda daný rok je přestupný. Ukazuje jak by se dál řešit problém v gregorianském kalendáři který nastává každých 2620 let.</span>
+<a name="l00443"></a>00443 <span class="comment"> *\param[in]    rok     (int) Číslo roku k ověření.</span>
+<a name="l00444"></a>00444 <span class="comment"> *\return               (int) počet dnů v přestupném roce pro vyrovnání (0 - 2).</span>
+<a name="l00445"></a>00445 <span class="comment"> */</span>
+<a name="l00446"></a><a class="code" href="funkce_8h.html#a4b192683b01b2c1c20e4a29ca3f690d0">00446</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a4b192683b01b2c1c20e4a29ca3f690d0" title="prestupny_rok2 - Přestupný rok 2 (v programu se tato funkce nepoužívá)">prestupny_rok2</a>(<span class="keywordtype">int</span> rok){ <span class="comment">//tato funkce je ukázka jak by se mohl vyřešít problém v gregorianském kalendáři který nastává každých 2620 let</span>
+<a name="l00447"></a>00447     <span class="keywordtype">int</span> dnu=0;
+<a name="l00448"></a>00448     <span class="keywordflow">if</span> (rok % 4 == 0){
+<a name="l00449"></a>00449                 dnu = 1;
+<a name="l00450"></a>00450                 <span class="keywordflow">if</span> (rok % 100 == 0 &amp;&amp; rok % 400 == 0){
+<a name="l00451"></a>00451                         dnu = 1;
+<a name="l00452"></a>00452                 }
+<a name="l00453"></a>00453                 <span class="keywordflow">else</span>{
+<a name="l00454"></a>00454             <span class="keywordflow">if</span> (rok % 100 == 0 &amp;&amp; rok % 400 != 0)
+<a name="l00455"></a>00455                 dnu = 0;
+<a name="l00456"></a>00456                 }
+<a name="l00457"></a>00457     }
+<a name="l00458"></a>00458     <span class="keywordflow">if</span>(rok%2620 &amp;&amp; rok&gt;0)
+<a name="l00459"></a>00459         dnu+=1;
+<a name="l00460"></a>00460     <span class="keywordflow">return</span> dnu;
+<a name="l00461"></a>00461 }
+<a name="l00462"></a>00462 <span class="comment"></span>
+<a name="l00463"></a>00463 <span class="comment">/**</span>
+<a name="l00464"></a>00464 <span class="comment"> *\brief                dny_v_mesici - Dny v měsící</span>
+<a name="l00465"></a>00465 <span class="comment"> *\details              Funkce, která zjistí kolik dní má daný měsíc.</span>
+<a name="l00466"></a>00466 <span class="comment"> *\param[in]    mesic   (int) Číslo měsíce k ověření.</span>
+<a name="l00467"></a>00467 <span class="comment"> *\param[in]    rok     (int) Číslo roku ve kterém se zjišťovaný měsíc nachází.</span>
+<a name="l00468"></a>00468 <span class="comment"> *\return               (int) počet dnů (0 - 31).</span>
+<a name="l00469"></a>00469 <span class="comment"> */</span>
+<a name="l00470"></a><a class="code" href="funkce_8h.html#a0bb41ae083bbb81b312899a93921512f">00470</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(<span class="keywordtype">int</span> cislo_mesice, <span class="keywordtype">int</span> rok){ <span class="comment">//počet dnů v měsící</span>
+<a name="l00471"></a>00471     <span class="keywordtype">int</span> prestupny_mesic = 28;
+<a name="l00472"></a>00472     <span class="keywordflow">if</span> (<a class="code" href="funkce_8cpp.html#a4fb4d20b69ca004e876ce8415d1575e8" title="prestupny_rok - Přestupný rok">prestupny_rok</a>(rok))
+<a name="l00473"></a>00473         prestupny_mesic = 29;
+<a name="l00474"></a>00474     <span class="keywordtype">int</span> dny[<a class="code" href="funkce_8cpp.html#a95107071b9a25bc8df5074cc44593d81">pocet_mesicu</a>] = {31, prestupny_mesic, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+<a name="l00475"></a>00475 
+<a name="l00476"></a>00476     <span class="keywordflow">return</span> dny[cislo_mesice-1];
+<a name="l00477"></a>00477 }
+<a name="l00478"></a>00478 <span class="comment"></span>
+<a name="l00479"></a>00479 <span class="comment">/**</span>
+<a name="l00480"></a>00480 <span class="comment"> *\brief                nasledujici_mesic - Následující měsíc</span>
+<a name="l00481"></a>00481 <span class="comment"> *\details              Funkce, která zjistí jaký je následující měsíc.</span>
+<a name="l00482"></a>00482 <span class="comment"> *\param[in]    mesic   (int) Číslo aktuálního měsíce.</span>
+<a name="l00483"></a>00483 <span class="comment"> *\return               (int) Číslo následujícího měsíce (1 - 12).</span>
+<a name="l00484"></a>00484 <span class="comment"> */</span>
+<a name="l00485"></a><a class="code" href="funkce_8h.html#a9ada6b049499d9224c99280cff3249c5">00485</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a9ada6b049499d9224c99280cff3249c5" title="nasledujici_mesic - Následující měsíc">nasledujici_mesic</a>(<span class="keywordtype">int</span> cislo_mesice){
+<a name="l00486"></a>00486     <span class="keywordflow">if</span>(cislo_mesice==12)
+<a name="l00487"></a>00487         <span class="keywordflow">return</span> 1;
+<a name="l00488"></a>00488     <span class="keywordflow">else</span>
+<a name="l00489"></a>00489         <span class="keywordflow">return</span> cislo_mesice + 1;
+<a name="l00490"></a>00490 }
+<a name="l00491"></a>00491 <span class="comment"></span>
+<a name="l00492"></a>00492 <span class="comment">/**</span>
+<a name="l00493"></a>00493 <span class="comment"> *\brief                predchozi_mesic - Předchozí měsíc</span>
+<a name="l00494"></a>00494 <span class="comment"> *\details              Funkce, která zjistí jaký je předchozí měsíc.</span>
+<a name="l00495"></a>00495 <span class="comment"> *\param[in]    mesic   (int) Číslo aktuálního měsíce.</span>
+<a name="l00496"></a>00496 <span class="comment"> *\return               (int) Číslo předchozího měsíce (1 - 12).</span>
+<a name="l00497"></a>00497 <span class="comment"> */</span>
+<a name="l00498"></a><a class="code" href="funkce_8h.html#af32eece35d2e57c1a5c81e3549e2aa94">00498</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#af32eece35d2e57c1a5c81e3549e2aa94" title="predchozi_mesic - Předchozí měsíc">predchozi_mesic</a>(<span class="keywordtype">int</span> cislo_mesice){
+<a name="l00499"></a>00499     <span class="keywordflow">if</span>(cislo_mesice==1)
+<a name="l00500"></a>00500         <span class="keywordflow">return</span> 12;
+<a name="l00501"></a>00501     <span class="keywordflow">else</span>
+<a name="l00502"></a>00502         <span class="keywordflow">return</span> cislo_mesice - 1;
+<a name="l00503"></a>00503 }
+<a name="l00504"></a>00504 <span class="comment"></span>
+<a name="l00505"></a>00505 <span class="comment">/**</span>
+<a name="l00506"></a>00506 <span class="comment"> *\brief                nasledujici_den - Následující den v týdnu</span>
+<a name="l00507"></a>00507 <span class="comment"> *\details              Funkce, která zjistí jaký je následující den v týdnu.</span>
+<a name="l00508"></a>00508 <span class="comment"> *\param[in]    den     (int) Číslo aktuálního dne v týdnu.</span>
+<a name="l00509"></a>00509 <span class="comment"> *\return               (int) Číslo následujícího dne v týdnu (1 - 7).</span>
+<a name="l00510"></a>00510 <span class="comment"> */</span>
+<a name="l00511"></a><a class="code" href="funkce_8h.html#af420877d7aaa35fa9f1d005dfeaeef94">00511</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#af420877d7aaa35fa9f1d005dfeaeef94" title="nasledujici_den - Následující den v týdnu">nasledujici_den</a>(<span class="keywordtype">int</span> cislo_dne){
+<a name="l00512"></a>00512     <span class="keywordflow">if</span>(cislo_dne==7)
+<a name="l00513"></a>00513         <span class="keywordflow">return</span> 1;
+<a name="l00514"></a>00514     <span class="keywordflow">else</span>
+<a name="l00515"></a>00515         <span class="keywordflow">return</span> cislo_dne + 1;
+<a name="l00516"></a>00516 }
+<a name="l00517"></a>00517 <span class="comment"></span>
+<a name="l00518"></a>00518 <span class="comment">/**</span>
+<a name="l00519"></a>00519 <span class="comment"> *\brief                predchozi_den - Předchozí den v týdnu</span>
+<a name="l00520"></a>00520 <span class="comment"> *\details              Funkce, která zjistí jaký je předchozí den v týdnu.</span>
+<a name="l00521"></a>00521 <span class="comment"> *\param[in]    den     (int) Číslo aktuálního dne v týdnu.</span>
+<a name="l00522"></a>00522 <span class="comment"> *\return               (int) Číslo předchozího dne v týdnu (1 - 7).</span>
+<a name="l00523"></a>00523 <span class="comment"> */</span>
+<a name="l00524"></a><a class="code" href="funkce_8h.html#ab15e6e27558b1fdcb0a112a2f8da2058">00524</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#ab15e6e27558b1fdcb0a112a2f8da2058" title="predchozi_den - Předchozí den v týdnu">predchozi_den</a>(<span class="keywordtype">int</span> cislo_dne){
+<a name="l00525"></a>00525     <span class="keywordflow">if</span>(cislo_dne==1)
+<a name="l00526"></a>00526         <span class="keywordflow">return</span> 7;
+<a name="l00527"></a>00527     <span class="keywordflow">else</span>
+<a name="l00528"></a>00528         <span class="keywordflow">return</span> cislo_dne - 1;
+<a name="l00529"></a>00529 }
+<a name="l00530"></a>00530 <span class="comment"></span>
+<a name="l00531"></a>00531 <span class="comment">/**</span>
+<a name="l00532"></a>00532 <span class="comment"> *\brief                dnu_v_roce - Dnů v roce</span>
+<a name="l00533"></a>00533 <span class="comment"> *\details              Funkce, která zjistí kolik dnů je v daném roce.</span>
+<a name="l00534"></a>00534 <span class="comment"> *\param[in]    den     (int) Číslo aktuálního roku.</span>
+<a name="l00535"></a>00535 <span class="comment"> *\return               (int) Počet dnů (365, 366).</span>
+<a name="l00536"></a>00536 <span class="comment"> */</span>
+<a name="l00537"></a><a class="code" href="funkce_8h.html#ac960d6150c3cb74553b291869f24c12a">00537</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#ac960d6150c3cb74553b291869f24c12a" title="dnu_v_roce - Dnů v roce">dnu_v_roce</a>(<span class="keywordtype">int</span> rok){
+<a name="l00538"></a>00538     <span class="keywordflow">if</span>(<a class="code" href="funkce_8cpp.html#a4fb4d20b69ca004e876ce8415d1575e8" title="prestupny_rok - Přestupný rok">prestupny_rok</a>(rok))
+<a name="l00539"></a>00539         <span class="keywordflow">return</span> 366;
+<a name="l00540"></a>00540     <span class="keywordflow">else</span>
+<a name="l00541"></a>00541         <span class="keywordflow">return</span> 365;
+<a name="l00542"></a>00542 }
+<a name="l00543"></a>00543 <span class="comment"></span>
+<a name="l00544"></a>00544 <span class="comment">/**</span>
+<a name="l00545"></a>00545 <span class="comment"> *\brief                posun_mesice_roky - Posun měsíce roky</span>
+<a name="l00546"></a>00546 <span class="comment"> *\details              Funkce, která zjistí jaký je následující rok a měsíc při daném krokování od aktuálního (zadáného) data.</span>
+<a name="l00547"></a>00547 <span class="comment"> *\param[in]    next    (int) Počet roků.</span>
+<a name="l00548"></a>00548 <span class="comment"> *\param[in]    smer    (bool) Směr [true] vpřed; [false] zpět.</span>
+<a name="l00549"></a>00549 <span class="comment"> *\param[in]    mesic   (int) Aktuální měsíc.</span>
+<a name="l00550"></a>00550 <span class="comment"> *\param[in]    rok     (int) Aktuální rok.</span>
+<a name="l00551"></a>00551 <span class="comment"> *\param[out]   vystup  (int)[0] Následující rok; (int)[1] Následující měsíc.</span>
+<a name="l00552"></a>00552 <span class="comment"> *\return               (void).</span>
+<a name="l00553"></a>00553 <span class="comment"> */</span>
+<a name="l00554"></a><a class="code" href="funkce_8h.html#af4779ac1131f7f20e99233a9bea26fca">00554</a> <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#a22a395db0168561d98e523135bc0388c" title="posun_mesice_roky - Posun měsíce roky">posun_mesice_roky</a>(<span class="keywordtype">int</span> next, <span class="keywordtype">bool</span> smer, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> rok, <span class="keywordtype">int</span> *vystup){ <span class="comment">//smer - pokud je true tak je to jako dopředu a naopak</span>
+<a name="l00555"></a>00555     <span class="keywordflow">for</span>(;next!=0;next--){
+<a name="l00556"></a>00556         <span class="keywordflow">if</span>(smer){
+<a name="l00557"></a>00557             mesic = <a class="code" href="funkce_8cpp.html#a9ada6b049499d9224c99280cff3249c5" title="nasledujici_mesic - Následující měsíc">nasledujici_mesic</a>(mesic);
+<a name="l00558"></a>00558             <span class="keywordflow">if</span>(mesic==1)
+<a name="l00559"></a>00559                 rok++;
+<a name="l00560"></a>00560         }
+<a name="l00561"></a>00561         <span class="keywordflow">else</span>{
+<a name="l00562"></a>00562             mesic = <a class="code" href="funkce_8cpp.html#af32eece35d2e57c1a5c81e3549e2aa94" title="predchozi_mesic - Předchozí měsíc">predchozi_mesic</a>(mesic);
+<a name="l00563"></a>00563             <span class="keywordflow">if</span>(mesic==12)
+<a name="l00564"></a>00564                 rok--;
+<a name="l00565"></a>00565         }
+<a name="l00566"></a>00566     }
+<a name="l00567"></a>00567     vystup[0] = rok;
+<a name="l00568"></a>00568     vystup[1] = mesic;
+<a name="l00569"></a>00569     <span class="comment">//int array[2]={rok, mesic};</span>
+<a name="l00570"></a>00570     <span class="comment">//return array;</span>
+<a name="l00571"></a>00571 }
+<a name="l00572"></a>00572 
+<a name="l00573"></a>00573 <span class="comment"></span>
+<a name="l00574"></a>00574 <span class="comment">/**</span>
+<a name="l00575"></a>00575 <span class="comment"> *\brief                pocet_dnu - Počet dnů</span>
+<a name="l00576"></a>00576 <span class="comment"> *\details              Funkce, která zjistí kolik je dnů mezi dvěma daty. Je jedno pokud se zadá napřed menší datum a pak větší nebo naopak.</span>
+<a name="l00577"></a>00577 <span class="comment"> *\param[in]    den     (int) Den z data 1.</span>
+<a name="l00578"></a>00578 <span class="comment"> *\param[in]    mesic   (int) Měsíc z data 1.</span>
+<a name="l00579"></a>00579 <span class="comment"> *\param[in]    rok     (int) Rok z data 1.</span>
+<a name="l00580"></a>00580 <span class="comment"> *\param[in]    den2    (int) Den z data 2.</span>
+<a name="l00581"></a>00581 <span class="comment"> *\param[in]    mesic2  (int) Měsíc z data 2.</span>
+<a name="l00582"></a>00582 <span class="comment"> *\param[in]    rok2    (int) Rok z data 2.</span>
+<a name="l00583"></a>00583 <span class="comment"> *\return               (int) počet dnů.</span>
+<a name="l00584"></a>00584 <span class="comment"> */</span>
+<a name="l00585"></a><a class="code" href="funkce_8h.html#a9f2625c6264f9c5463a005fe92e2a1a5">00585</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a9f2625c6264f9c5463a005fe92e2a1a5" title="pocet_dnu - Počet dnů">pocet_dnu</a>(<span class="keywordtype">int</span> den, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> rok, <span class="keywordtype">int</span> den2, <span class="keywordtype">int</span> mesic2, <span class="keywordtype">int</span> rok2){<span class="comment">// druhý datum musí byt vždy vyšší - v opačném připadě se přehodí</span>
+<a name="l00586"></a>00586     <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a9f2625c6264f9c5463a005fe92e2a1a5" title="pocet_dnu - Počet dnů">pocet_dnu</a>=0;
+<a name="l00587"></a>00587 
+<a name="l00588"></a>00588     <span class="keywordflow">if</span>( ( (rok*10000)+(mesic*100)+(den) ) &gt; ( (rok2*10000)+(mesic2*100)+(den2) ) ){
+<a name="l00589"></a>00589         <span class="keywordtype">int</span> x = rok;
+<a name="l00590"></a>00590         <span class="keywordtype">int</span> y = mesic;
+<a name="l00591"></a>00591         <span class="keywordtype">int</span> z = den;
+<a name="l00592"></a>00592         rok = rok2;
+<a name="l00593"></a>00593         mesic = mesic2;
+<a name="l00594"></a>00594         den = den2;
+<a name="l00595"></a>00595         rok2 = x;
+<a name="l00596"></a>00596         mesic2 = y;
+<a name="l00597"></a>00597         den2 = z;
+<a name="l00598"></a>00598     }
+<a name="l00599"></a>00599     <span class="keywordtype">int</span> pocet_dnu_1=<a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(mesic, rok)-den;
+<a name="l00600"></a>00600     <span class="keywordtype">int</span> pocet_dnu_2=den2;
+<a name="l00601"></a>00601     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; mesic+i&lt;=12; i++){<span class="comment">//pocet dnu do konce roku</span>
+<a name="l00602"></a>00602         pocet_dnu_1+=<a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(mesic+i, rok);
+<a name="l00603"></a>00603     }
+<a name="l00604"></a>00604     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; mesic2-i&gt;=1; i++){<span class="comment">//pocet dnu od zacatku roku</span>
+<a name="l00605"></a>00605         pocet_dnu_2+=<a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(mesic2-i, rok2);
+<a name="l00606"></a>00606     }
+<a name="l00607"></a>00607     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; rok+i&lt;rok2;i++){<span class="comment">//pocet dnu mezi roky</span>
+<a name="l00608"></a>00608         pocet_dnu+=<a class="code" href="funkce_8cpp.html#ac960d6150c3cb74553b291869f24c12a" title="dnu_v_roce - Dnů v roce">dnu_v_roce</a>(rok+i);
+<a name="l00609"></a>00609     }
+<a name="l00610"></a>00610 
+<a name="l00611"></a>00611     <span class="keywordflow">if</span>(rok==rok2 &amp;&amp; mesic==mesic2)
+<a name="l00612"></a>00612         pocet_dnu=pocet_dnu_2-(<a class="code" href="funkce_8cpp.html#ac960d6150c3cb74553b291869f24c12a" title="dnu_v_roce - Dnů v roce">dnu_v_roce</a>(rok)-pocet_dnu_1);
+<a name="l00613"></a>00613     <span class="keywordflow">else</span> <span class="keywordflow">if</span>(rok==rok2){
+<a name="l00614"></a>00614         pocet_dnu=pocet_dnu_2-(<a class="code" href="funkce_8cpp.html#ac960d6150c3cb74553b291869f24c12a" title="dnu_v_roce - Dnů v roce">dnu_v_roce</a>(rok)-pocet_dnu_1);<span class="comment">//dnu_v_roce(rok)-pocet_dnu_2+pocet_dnu_1-1;</span>
+<a name="l00615"></a>00615     }
+<a name="l00616"></a>00616     <span class="keywordflow">else</span>
+<a name="l00617"></a>00617         pocet_dnu=pocet_dnu+pocet_dnu_1+pocet_dnu_2;
+<a name="l00618"></a>00618     <span class="keywordflow">return</span> <a class="code" href="funkce_8cpp.html#a9f2625c6264f9c5463a005fe92e2a1a5" title="pocet_dnu - Počet dnů">pocet_dnu</a>;
+<a name="l00619"></a>00619 }
+<a name="l00620"></a>00620 <span class="comment"></span>
+<a name="l00621"></a>00621 <span class="comment">/**</span>
+<a name="l00622"></a>00622 <span class="comment"> *\brief                generator_dnu - Generátor dnů</span>
+<a name="l00623"></a>00623 <span class="comment"> *\details              Funkce, která vypočítá měsíc, rok, atd v konečném měsící podle počtu kroků z aktuálního data (nevolitelného - synchronizace).</span>
+<a name="l00624"></a>00624 <span class="comment"> *\param[in]    next    (int) Počet kroků.</span>
+<a name="l00625"></a>00625 <span class="comment"> *\param[in]    smer    (bool) Směr k získání konečného měsíce [true] vpřed; [false] zpět.</span>
+<a name="l00626"></a>00626 <span class="comment"> *\param[out]   pole    (int)[6] Data s výstupem: [0] Den v týdnu aktuálního dne; [1] Počet dnů v aktuálnímm měsící; [2] Výpočítány konečný měsíc; [3] Výpočítány konečný rok; [4] Den v týdnu, kterým začíná vypočtený měsíc; [5] Den v aktuálním měsící.</span>
+<a name="l00627"></a>00627 <span class="comment"> *\return               (void).</span>
+<a name="l00628"></a>00628 <span class="comment"> */</span>
+<a name="l00629"></a><a class="code" href="funkce_8h.html#a601b8be413714e6323cef8e42db37edf">00629</a> <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#a3ed47094c60dfa81f3ee381e663ebd91" title="generator_dnu - Generátor dnů">generator_dnu</a>(<span class="keywordtype">int</span> next, <span class="keywordtype">bool</span> smer, <span class="keywordtype">int</span> *pole){ <span class="comment">//smer - pokud je true tak je to jako dopředu a naopak</span>
+<a name="l00630"></a>00630     time_t t;
+<a name="l00631"></a>00631 
+<a name="l00632"></a>00632     <span class="keyword">struct </span>tm *pt;
+<a name="l00633"></a>00633     t = time(NULL);
+<a name="l00634"></a>00634     pt = localtime(&amp;t);
+<a name="l00635"></a>00635     <span class="comment">//synchronizace kalendaře - dá se to i pevně nadefinovat bez času. V tom případě by kalendař nebyl na aktuální stránce.</span>
+<a name="l00636"></a>00636     <span class="keywordtype">int</span> den = pt-&gt;tm_mday; <span class="comment">// den v mesici 1 - 31</span>
+<a name="l00637"></a>00637     <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a1682789e83a853ed4748c1ba91689952" title="den_v_tydnu - Den v týdnu">den_v_tydnu</a> = <a class="code" href="funkce_8cpp.html#ab15e6e27558b1fdcb0a112a2f8da2058" title="predchozi_den - Předchozí den v týdnu">predchozi_den</a>(pt-&gt;tm_wday+1);<span class="comment">//1 - pondeli 2 - utery ...</span>
+<a name="l00638"></a>00638     <span class="keywordtype">int</span> mesic = pt-&gt;tm_mon+1;<span class="comment">//1 - leden, 2 - unor ...</span>
+<a name="l00639"></a>00639     <span class="keywordtype">int</span> rok = pt-&gt;tm_year+1900;
+<a name="l00640"></a>00640 
+<a name="l00641"></a>00641 
+<a name="l00642"></a>00642     <span class="keywordtype">int</span> posun_data[2];
+<a name="l00643"></a>00643     <a class="code" href="funkce_8cpp.html#a22a395db0168561d98e523135bc0388c" title="posun_mesice_roky - Posun měsíce roky">posun_mesice_roky</a>(next, smer, mesic, rok, posun_data); <span class="comment">//[0] - novy rok [1] - novy mesic</span>
+<a name="l00644"></a>00644 
+<a name="l00645"></a>00645     <span class="keywordtype">int</span> dnu_v_mesici = <a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(posun_data[1], posun_data[0]);<span class="comment"></span>
+<a name="l00646"></a>00646 <span class="comment">/////////</span>
+<a name="l00647"></a>00647 <span class="comment"></span>    <span class="keywordtype">int</span> pocet = <a class="code" href="funkce_8cpp.html#a9f2625c6264f9c5463a005fe92e2a1a5" title="pocet_dnu - Počet dnů">pocet_dnu</a>(den, mesic, rok, 1, posun_data[1], posun_data[0]);<span class="comment"></span>
+<a name="l00648"></a>00648 <span class="comment">////////</span>
+<a name="l00649"></a>00649 <span class="comment"></span>
+<a name="l00650"></a>00650     <span class="keywordtype">int</span> pricist = pocet%7;
+<a name="l00651"></a>00651 
+<a name="l00652"></a>00652     <span class="keywordtype">int</span> prvni_den_v_mesici=<a class="code" href="funkce_8cpp.html#a1682789e83a853ed4748c1ba91689952" title="den_v_tydnu - Den v týdnu">den_v_tydnu</a>;
+<a name="l00653"></a>00653 
+<a name="l00654"></a>00654     <span class="keywordflow">if</span>(smer &amp;&amp; next&gt;0){
+<a name="l00655"></a>00655         <span class="keywordflow">for</span>(; pricist!=0; pricist--){
+<a name="l00656"></a>00656             prvni_den_v_mesici = <a class="code" href="funkce_8cpp.html#af420877d7aaa35fa9f1d005dfeaeef94" title="nasledujici_den - Následující den v týdnu">nasledujici_den</a>(prvni_den_v_mesici);
+<a name="l00657"></a>00657         }
+<a name="l00658"></a>00658     }
+<a name="l00659"></a>00659     <span class="keywordflow">else</span>{
+<a name="l00660"></a>00660         <span class="keywordflow">for</span>(; pricist!=0; pricist--){
+<a name="l00661"></a>00661             prvni_den_v_mesici = <a class="code" href="funkce_8cpp.html#ab15e6e27558b1fdcb0a112a2f8da2058" title="predchozi_den - Předchozí den v týdnu">predchozi_den</a>(prvni_den_v_mesici);
+<a name="l00662"></a>00662         }
+<a name="l00663"></a>00663     }
+<a name="l00664"></a>00664 
+<a name="l00665"></a>00665     pole[0]=<a class="code" href="funkce_8cpp.html#a1682789e83a853ed4748c1ba91689952" title="den_v_tydnu - Den v týdnu">den_v_tydnu</a>;
+<a name="l00666"></a>00666     pole[1]=dnu_v_mesici;
+<a name="l00667"></a>00667     pole[2]=posun_data[1];
+<a name="l00668"></a>00668     pole[3]=posun_data[0];
+<a name="l00669"></a>00669     pole[4]=prvni_den_v_mesici;
+<a name="l00670"></a>00670     pole[5]=den;
+<a name="l00671"></a>00671 
+<a name="l00672"></a>00672 
+<a name="l00673"></a>00673 }
+<a name="l00674"></a>00674 <span class="comment"></span>
+<a name="l00675"></a>00675 <span class="comment">/**</span>
+<a name="l00676"></a>00676 <span class="comment"> *\brief                nasledujici_den_v_mesici - Následující den v měsící</span>
+<a name="l00677"></a>00677 <span class="comment"> *\details              Funkce, která zjistí jaký je následující den v měsící.</span>
+<a name="l00678"></a>00678 <span class="comment"> *\param[in]    den     (int) Číslo aktuálního dne v měsící.</span>
+<a name="l00679"></a>00679 <span class="comment"> *\param[in]    mesic   (int) Číslo aktuálního měsíce.</span>
+<a name="l00680"></a>00680 <span class="comment"> *\param[in]    rok     (int) Číslo aktuálního roku.</span>
+<a name="l00681"></a>00681 <span class="comment"> *\return               (int) Číslo následujícího dne v měsící (1 - 31).</span>
+<a name="l00682"></a>00682 <span class="comment"> */</span>
+<a name="l00683"></a><a class="code" href="funkce_8h.html#a5945da772598307f3cfc1d4dbdeeabb7">00683</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a2df89a0b6c94f41def24d988c1641e77" title="nasledujici_den_v_mesici - Následující den v měsící">nasledujici_den_v_mesici</a>(<span class="keywordtype">int</span> den, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> rok){
+<a name="l00684"></a>00684     <span class="keywordtype">int</span> nden=0;
+<a name="l00685"></a>00685     <span class="keywordflow">if</span>(den == <a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(mesic, rok)){
+<a name="l00686"></a>00686         nden=1;
+<a name="l00687"></a>00687     }
+<a name="l00688"></a>00688     <span class="keywordflow">else</span>{
+<a name="l00689"></a>00689         nden=den+1;
+<a name="l00690"></a>00690     }
+<a name="l00691"></a>00691 
+<a name="l00692"></a>00692     <span class="keywordflow">return</span> nden;
+<a name="l00693"></a>00693 }
+<a name="l00694"></a>00694 <span class="comment"></span>
+<a name="l00695"></a>00695 <span class="comment">/**</span>
+<a name="l00696"></a>00696 <span class="comment"> *\brief                predchozi_den_v_mesici - Předchozí den v měsící</span>
+<a name="l00697"></a>00697 <span class="comment"> *\details              Funkce, která zjistí jaký je předchozí den v měsící.</span>
+<a name="l00698"></a>00698 <span class="comment"> *\param[in]    den     (int) Číslo aktuálního dne v měsící.</span>
+<a name="l00699"></a>00699 <span class="comment"> *\param[in]    mesic   (int) Číslo aktuálního měsíce.</span>
+<a name="l00700"></a>00700 <span class="comment"> *\param[in]    rok     (int) Číslo aktuálního roku.</span>
+<a name="l00701"></a>00701 <span class="comment"> *\return               (int) Číslo předchozího dne v měsící (1 - 31).</span>
+<a name="l00702"></a>00702 <span class="comment"> */</span>
+<a name="l00703"></a><a class="code" href="funkce_8h.html#afdc2cae8b6675b099256bb1c65c01f2f">00703</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a5e181498e6bad45fddd44a5594966f4d" title="predchozi_den_v_mesici - Předchozí den v měsící">predchozi_den_v_mesici</a>(<span class="keywordtype">int</span> den, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> rok){
+<a name="l00704"></a>00704     <span class="keywordtype">int</span> nden=0;
+<a name="l00705"></a>00705     <span class="keywordtype">int</span> nmesic=mesic;
+<a name="l00706"></a>00706     <span class="keywordtype">int</span> nrok=rok;
+<a name="l00707"></a>00707     <span class="keywordflow">if</span>(den == 1){
+<a name="l00708"></a>00708         nmesic = <a class="code" href="funkce_8cpp.html#af32eece35d2e57c1a5c81e3549e2aa94" title="predchozi_mesic - Předchozí měsíc">predchozi_mesic</a>(nmesic);
+<a name="l00709"></a>00709         <span class="keywordflow">if</span>(nmesic==12)
+<a name="l00710"></a>00710             nrok--;
+<a name="l00711"></a>00711         nden=<a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(nmesic, nrok);
+<a name="l00712"></a>00712     }
+<a name="l00713"></a>00713     <span class="keywordflow">else</span>{
+<a name="l00714"></a>00714         nden=den-1;
+<a name="l00715"></a>00715     }
+<a name="l00716"></a>00716 
+<a name="l00717"></a>00717     <span class="keywordflow">return</span> nden;
+<a name="l00718"></a>00718 }
+<a name="l00719"></a>00719 <span class="comment"></span>
+<a name="l00720"></a>00720 <span class="comment">/**</span>
+<a name="l00721"></a>00721 <span class="comment"> *\brief                tydenni_posun_mesice_roky - Týdenní posun měsíce roky</span>
+<a name="l00722"></a>00722 <span class="comment"> *\details              Funkce, která zjistí jaký je den, měsíc a rok ve vypočteném týdením bloku, který se vypočítá počtem kroků od zadaného data.</span>
+<a name="l00723"></a>00723 <span class="comment"> *\param[in]    next    (int) Počet kroků.</span>
+<a name="l00724"></a>00724 <span class="comment"> *\param[in]    smer    (bool) Směr krokování [true] vpřed; [false] zpět.</span>
+<a name="l00725"></a>00725 <span class="comment"> *\param[in]    den     (int) Den zadaného data.</span>
+<a name="l00726"></a>00726 <span class="comment"> *\param[in]    mesic   (int) Měsíc zadaného data.</span>
+<a name="l00727"></a>00727 <span class="comment"> *\param[in]    rok     (int) Rok zadaného data.</span>
+<a name="l00728"></a>00728 <span class="comment"> *\param[out]   vystup  (int)[3] Výstup start dne vypočteného týdne [0] rok; [1] měsíc; [2] rok.</span>
+<a name="l00729"></a>00729 <span class="comment"> *\return               (void).</span>
+<a name="l00730"></a>00730 <span class="comment"> */</span>
+<a name="l00731"></a><a class="code" href="funkce_8h.html#ad11cf0cc5c6e762eef898c945a013762">00731</a> <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#ad11cf0cc5c6e762eef898c945a013762" title="tydenni_posun_mesice_roky - Týdenní posun měsíce roky">tydenni_posun_mesice_roky</a>(<span class="keywordtype">int</span> next, <span class="keywordtype">bool</span> smer, <span class="keywordtype">int</span> den, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> rok, <span class="keywordtype">int</span> *vystup){ <span class="comment">//smer - pokud je true tak je to jako dopředu a naopak</span>
+<a name="l00732"></a>00732     <span class="keywordtype">int</span> start_den=den;
+<a name="l00733"></a>00733     <span class="keywordflow">for</span>(;next!=0;next--){
+<a name="l00734"></a>00734         <span class="keywordflow">if</span>(smer){
+<a name="l00735"></a>00735             <span class="keywordflow">if</span>(start_den&lt;=<a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(mesic, rok)-7 )
+<a name="l00736"></a>00736                 start_den+=7;
+<a name="l00737"></a>00737             <span class="keywordflow">else</span>{
+<a name="l00738"></a>00738                 start_den=7-(<a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(mesic, rok)-start_den);
+<a name="l00739"></a>00739                 mesic=<a class="code" href="funkce_8cpp.html#a9ada6b049499d9224c99280cff3249c5" title="nasledujici_mesic - Následující měsíc">nasledujici_mesic</a>(mesic);
+<a name="l00740"></a>00740             }
+<a name="l00741"></a>00741             <span class="keywordflow">if</span>(mesic==1 &amp;&amp; start_den&lt;=7)
+<a name="l00742"></a>00742                 rok++;
+<a name="l00743"></a>00743         }
+<a name="l00744"></a>00744         <span class="keywordflow">else</span>{
+<a name="l00745"></a>00745             <span class="keywordflow">if</span>(start_den&gt;7)
+<a name="l00746"></a>00746                 start_den-=7;
+<a name="l00747"></a>00747             <span class="keywordflow">else</span>{
+<a name="l00748"></a>00748                 start_den-=7;
+<a name="l00749"></a>00749                 mesic=<a class="code" href="funkce_8cpp.html#af32eece35d2e57c1a5c81e3549e2aa94" title="predchozi_mesic - Předchozí měsíc">predchozi_mesic</a>(mesic);
+<a name="l00750"></a>00750                 <span class="keywordflow">if</span>(mesic==12)
+<a name="l00751"></a>00751                     rok--;
+<a name="l00752"></a>00752                 start_den=<a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(mesic, rok)+start_den;
+<a name="l00753"></a>00753             }
+<a name="l00754"></a>00754         }
+<a name="l00755"></a>00755     }
+<a name="l00756"></a>00756     vystup[0] = rok;
+<a name="l00757"></a>00757     vystup[1] = mesic;
+<a name="l00758"></a>00758     vystup[2] = start_den;
+<a name="l00759"></a>00759 }
+<a name="l00760"></a>00760 <span class="comment"></span>
+<a name="l00761"></a>00761 <span class="comment">/**</span>
+<a name="l00762"></a>00762 <span class="comment"> *\brief                tydenni_generator_dnu - Týdenní generátor dnů</span>
+<a name="l00763"></a>00763 <span class="comment"> *\details              Funkce, která zjistí jaký je den, měsíc a rok ve vypočteném týdením bloku, který se vypočítá počtem kroků od aktualního data.</span>
+<a name="l00764"></a>00764 <span class="comment"> *\param[in]    next    (int) Počet kroků.</span>
+<a name="l00765"></a>00765 <span class="comment"> *\param[in]    smer    (bool) Směr krokování [true] vpřed; [false] zpět.</span>
+<a name="l00766"></a>00766 <span class="comment"> *\param[out]   vystup  (int)[3] Výstup start dne vypočteného týdne [0] rok; [1] měsíc; [2] rok.</span>
+<a name="l00767"></a>00767 <span class="comment"> *\return               (void).</span>
+<a name="l00768"></a>00768 <span class="comment"> */</span>
+<a name="l00769"></a><a class="code" href="funkce_8h.html#a4bd7c61f18032c62d6d5212230a8f991">00769</a> <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#afaf22ceb59ae4a1e1ee768180dae2ff0" title="tydenni_generator_dnu - Týdenní generátor dnů">tydenni_generator_dnu</a>(<span class="keywordtype">int</span> next, <span class="keywordtype">bool</span> smer, <span class="keywordtype">int</span> *pole){
+<a name="l00770"></a>00770     time_t t;
+<a name="l00771"></a>00771 
+<a name="l00772"></a>00772     <span class="keyword">struct </span>tm *pt;
+<a name="l00773"></a>00773     t = time(NULL);
+<a name="l00774"></a>00774     pt = localtime(&amp;t);
+<a name="l00775"></a>00775     <span class="comment">//synchronizace kalendaře - dá se to i pevně nadefinovat bez času. V tom případě by kalendař nebyl na aktuální stránce.</span>
+<a name="l00776"></a>00776     <span class="keywordtype">int</span> den = pt-&gt;tm_mday; <span class="comment">// den v mesici 1 - 31</span>
+<a name="l00777"></a>00777     <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a1682789e83a853ed4748c1ba91689952" title="den_v_tydnu - Den v týdnu">den_v_tydnu</a> = <a class="code" href="funkce_8cpp.html#ab15e6e27558b1fdcb0a112a2f8da2058" title="predchozi_den - Předchozí den v týdnu">predchozi_den</a>(pt-&gt;tm_wday+1);<span class="comment">//1 - pondeli 2 - utery ...</span>
+<a name="l00778"></a>00778     <span class="keywordtype">int</span> mesic = pt-&gt;tm_mon+1;<span class="comment">//1 - leden, 2 - unor ...</span>
+<a name="l00779"></a>00779     <span class="keywordtype">int</span> rok = pt-&gt;tm_year+1900;
+<a name="l00780"></a>00780 
+<a name="l00781"></a>00781     <span class="keywordtype">int</span> posun_data[3];
+<a name="l00782"></a>00782     <a class="code" href="funkce_8cpp.html#ad11cf0cc5c6e762eef898c945a013762" title="tydenni_posun_mesice_roky - Týdenní posun měsíce roky">tydenni_posun_mesice_roky</a>(next, smer, den, mesic, rok, posun_data);
+<a name="l00783"></a>00783 
+<a name="l00784"></a>00784     pole[0]=<a class="code" href="funkce_8cpp.html#a1682789e83a853ed4748c1ba91689952" title="den_v_tydnu - Den v týdnu">den_v_tydnu</a>;
+<a name="l00785"></a>00785     pole[1]=posun_data[2];<span class="comment">//start den</span>
+<a name="l00786"></a>00786     pole[2]=posun_data[1];<span class="comment">//start mesic</span>
+<a name="l00787"></a>00787     pole[3]=posun_data[0];<span class="comment">//start rok</span>
+<a name="l00788"></a>00788     pole[4]=<a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(posun_data[1], posun_data[0]);
+<a name="l00789"></a>00789     <span class="comment">//pole[5]=den;</span>
+<a name="l00790"></a>00790 
+<a name="l00791"></a>00791 }
+<a name="l00792"></a>00792 <span class="comment"></span>
+<a name="l00793"></a>00793 <span class="comment">/**</span>
+<a name="l00794"></a>00794 <span class="comment"> *\brief                vypis_cislo - Výpis číslo</span>
+<a name="l00795"></a>00795 <span class="comment"> *\details              Vypíše číslo zarovnané na dvě cifry.</span>
+<a name="l00796"></a>00796 <span class="comment"> *\param[in]    cislo   (int) Číslo připraveno na vypis.</span>
+<a name="l00797"></a>00797 <span class="comment"> *\return               (void).</span>
+<a name="l00798"></a>00798 <span class="comment"> */</span>
+<a name="l00799"></a><a class="code" href="funkce_8h.html#a482f1dd919ac8172659a14e16ee27517">00799</a> <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#a482f1dd919ac8172659a14e16ee27517" title="vypis_cislo - Výpis číslo">vypis_cislo</a>(<span class="keywordtype">int</span> cislo){
+<a name="l00800"></a>00800     <span class="keywordflow">if</span>(cislo&lt;10)
+<a name="l00801"></a>00801         cout&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;cislo;
+<a name="l00802"></a>00802     <span class="keywordflow">else</span>
+<a name="l00803"></a>00803         cout&lt;&lt;cislo;
+<a name="l00804"></a>00804 }
+<a name="l00805"></a>00805 <span class="comment"></span>
+<a name="l00806"></a>00806 <span class="comment">/**</span>
+<a name="l00807"></a>00807 <span class="comment"> *\brief                den_v_tydnu - Den v týdnu</span>
+<a name="l00808"></a>00808 <span class="comment"> *\details              Funkce zjistí, který den v týdnu, je zadané datum.</span>
+<a name="l00809"></a>00809 <span class="comment"> *\param[in]    den     (int) Den zadaného data.</span>
+<a name="l00810"></a>00810 <span class="comment"> *\param[in]    mesic   (int) Mesic zadaného data.</span>
+<a name="l00811"></a>00811 <span class="comment"> *\param[in]    rok     (int) Rok zadaného data.</span>
+<a name="l00812"></a>00812 <span class="comment"> *\return               (int) Den v týdnu (1 - 7).</span>
+<a name="l00813"></a>00813 <span class="comment"> */</span>
+<a name="l00814"></a><a class="code" href="funkce_8h.html#a8cbd162b53579bad1d33489e4a4499ce">00814</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a1682789e83a853ed4748c1ba91689952" title="den_v_tydnu - Den v týdnu">den_v_tydnu</a>(<span class="keywordtype">int</span> den, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> rok){
+<a name="l00815"></a>00815     time_t t;
+<a name="l00816"></a>00816 
+<a name="l00817"></a>00817     <span class="keyword">struct </span>tm *pt;
+<a name="l00818"></a>00818     t = time(NULL);
+<a name="l00819"></a>00819     pt = localtime(&amp;t);
+<a name="l00820"></a>00820 
+<a name="l00821"></a>00821     <span class="comment">//synchronizace kalendaře - dá se to i pevně nadefinovat bez času. V tom případě by kalendař nebyl na aktuální stránce.</span>
+<a name="l00822"></a>00822     <span class="keywordtype">int</span> den2 = pt-&gt;tm_mday; <span class="comment">// den v mesici 1 - 31</span>
+<a name="l00823"></a>00823     <span class="comment">//cout&lt;&lt;&quot;original: &quot;&lt;&lt;den2&lt;&lt;endl;</span>
+<a name="l00824"></a>00824     <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#a1682789e83a853ed4748c1ba91689952" title="den_v_tydnu - Den v týdnu">den_v_tydnu</a> = <a class="code" href="funkce_8cpp.html#ab15e6e27558b1fdcb0a112a2f8da2058" title="predchozi_den - Předchozí den v týdnu">predchozi_den</a>(pt-&gt;tm_wday+1);<span class="comment">//1 - pondeli 2 - utery ...</span>
+<a name="l00825"></a>00825     <span class="keywordtype">int</span> mesic2 = pt-&gt;tm_mon+1;<span class="comment">//1 - leden, 2 - unor ...</span>
+<a name="l00826"></a>00826     <span class="keywordtype">int</span> rok2 = pt-&gt;tm_year+1900;
+<a name="l00827"></a>00827     <span class="keywordtype">bool</span> smer=<span class="keyword">false</span>;
+<a name="l00828"></a>00828     <span class="keywordflow">if</span>( ( (rok*10000)+(mesic*100)+(den) ) &gt; ( (rok2*10000)+(mesic2*100)+(den2) ) )
+<a name="l00829"></a>00829         smer=<span class="keyword">true</span>;
+<a name="l00830"></a>00830 
+<a name="l00831"></a>00831     <span class="keywordtype">int</span> pocet = <a class="code" href="funkce_8cpp.html#a9f2625c6264f9c5463a005fe92e2a1a5" title="pocet_dnu - Počet dnů">pocet_dnu</a>(den2, mesic2, rok2, den, mesic, rok);
+<a name="l00832"></a>00832 
+<a name="l00833"></a>00833     <span class="keywordtype">int</span> posun = pocet - ( ( (int) pocet/7)*7);
+<a name="l00834"></a>00834 
+<a name="l00835"></a>00835     <span class="keywordflow">for</span>(;0&lt;posun;posun--)
+<a name="l00836"></a>00836         <span class="keywordflow">if</span>(smer)
+<a name="l00837"></a>00837             den_v_tydnu = <a class="code" href="funkce_8cpp.html#af420877d7aaa35fa9f1d005dfeaeef94" title="nasledujici_den - Následující den v týdnu">nasledujici_den</a>(den_v_tydnu);
+<a name="l00838"></a>00838         <span class="keywordflow">else</span>
+<a name="l00839"></a>00839             den_v_tydnu = <a class="code" href="funkce_8cpp.html#ab15e6e27558b1fdcb0a112a2f8da2058" title="predchozi_den - Předchozí den v týdnu">predchozi_den</a>(den_v_tydnu);
+<a name="l00840"></a>00840     <span class="keywordflow">return</span> <a class="code" href="funkce_8cpp.html#a1682789e83a853ed4748c1ba91689952" title="den_v_tydnu - Den v týdnu">den_v_tydnu</a>;
+<a name="l00841"></a>00841 }
+<a name="l00842"></a>00842 <span class="comment"></span>
+<a name="l00843"></a>00843 <span class="comment">/**</span>
+<a name="l00844"></a>00844 <span class="comment"> *\brief                svatky - Svatky</span>
+<a name="l00845"></a>00845 <span class="comment"> *\details              Funkce, která vypíše v daný den svátek (jmén či státní svátky).</span>
+<a name="l00846"></a>00846 <span class="comment"> *\param[in]    den     (int) Den zadaného data.</span>
+<a name="l00847"></a>00847 <span class="comment"> *\param[in]    mesic   (int) Mesic zadaného data.</span>
+<a name="l00848"></a>00848 <span class="comment"> *\return               (void).</span>
+<a name="l00849"></a>00849 <span class="comment"> */</span>
+<a name="l00850"></a><a class="code" href="funkce_8h.html#a8d5ee6bd40e126494ea71f902a622222">00850</a> <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#a8d5ee6bd40e126494ea71f902a622222" title="svatky - Svatky">svatky</a>(<span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> den){
+<a name="l00851"></a>00851     <span class="keywordtype">char</span> <span class="keyword">const</span> *vystup = <a class="code" href="funkce_8cpp.html#a7381030aaac922903eeca75bd73d068f" title="Pole se svátky.">s</a>[mesic-1][den-1];
+<a name="l00852"></a>00852     cout&lt;&lt;vystup;
+<a name="l00853"></a>00853 }
+<a name="l00854"></a>00854 <span class="comment"></span>
+<a name="l00855"></a>00855 <span class="comment">/**</span>
+<a name="l00856"></a>00856 <span class="comment"> *\brief                dalsi_menstruace - Další menstruace</span>
+<a name="l00857"></a>00857 <span class="comment"> *\details              Funkce zjistí, kdy bude další menstruace, ovulace apod.</span>
+<a name="l00858"></a>00858 <span class="comment"> *\param[in]    rok     (int) Rok zadaného data.</span>
+<a name="l00859"></a>00859 <span class="comment"> *\param[in]    mesic   (int) Mesic zadaného data.</span>
+<a name="l00860"></a>00860 <span class="comment"> *\param[in]    den     (int) Den zadaného data.</span>
+<a name="l00861"></a>00861 <span class="comment"> *\param[in]    cyklus  (int) Délka menstruačního cyklu.</span>
+<a name="l00862"></a>00862 <span class="comment"> *\param[in]    delka_m (int) Délka menstruace.</span>
+<a name="l00863"></a>00863 <span class="comment"> *\param[out]   pole    (int) [21] Výstupní pole. [0] Menstruace den; [1] Menstruace měsíc; [2] Menstruace rok; [3] Konec předchozí menstruace den; [4] Konec předchozí menstruace měsíc; [5] Konec předchozí menstruace rok; [6] Ovulace den; [7] Ovulace měsíc; [8] Ovulace rok; [9] Začátek velmi plodných dnů - den; [10] Začátek velmi plodných dnů - měsíc; [11] Začátek velmi plodných dnů - rok; [12] Konec velmi plodných dnů - den; [13] Konec velmi plodných dnů - měsíc; [14] Konec velmi plodných dnů - rok; [15] Začátek neplodných dnů - den; [16] Začátek neplodných dnů - měsíc; [17] Začátek neplodných dnů - rok; [18] Konec neplodných dnů - den; [19] Konec neplodných dnů - měsíc; [20] Konec neplodných dnů - rok</span>
+<a name="l00864"></a>00864 <span class="comment"> *\return               (bool) [true] vše proběhlo ok; [false] chyba.</span>
+<a name="l00865"></a>00865 <span class="comment"> */</span>
+<a name="l00866"></a><a class="code" href="funkce_8h.html#a72838af8428c327ccf3d8c5bfc8c4a78">00866</a> <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a72838af8428c327ccf3d8c5bfc8c4a78" title="dalsi_menstruace - Další menstruace">dalsi_menstruace</a>(<span class="keywordtype">int</span> rok, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> den, <span class="keywordtype">int</span> cyklus, <span class="keywordtype">int</span> delka_m, <span class="keywordtype">int</span> * pole){<span class="comment">//tato funkce udělá výpočet do další menstruace</span>
+<a name="l00867"></a>00867     <span class="keywordtype">bool</span> b = <span class="keyword">true</span>;
+<a name="l00868"></a>00868     <span class="keywordtype">int</span> menstruace_den_z=den;
+<a name="l00869"></a>00869     <span class="keywordtype">int</span> menstruace_mesic_z=mesic;
+<a name="l00870"></a>00870     <span class="keywordtype">int</span> menstruace_rok_z=rok;
+<a name="l00871"></a>00871 
+<a name="l00872"></a>00872     <span class="keywordtype">int</span> menstruace_den_k=den;
+<a name="l00873"></a>00873     <span class="keywordtype">int</span> menstruace_mesic_k=mesic;
+<a name="l00874"></a>00874     <span class="keywordtype">int</span> menstruace_rok_k=rok;
+<a name="l00875"></a>00875 
+<a name="l00876"></a>00876     <span class="keywordtype">int</span> ovulace_den=0;
+<a name="l00877"></a>00877     <span class="keywordtype">int</span> ovulace_mesic=0;
+<a name="l00878"></a>00878     <span class="keywordtype">int</span> ovulace_rok=0;
+<a name="l00879"></a>00879 
+<a name="l00880"></a>00880     <span class="keywordtype">int</span> velmiplodne_den_z=den;
+<a name="l00881"></a>00881     <span class="keywordtype">int</span> velmiplodne_mesic_z=mesic;
+<a name="l00882"></a>00882     <span class="keywordtype">int</span> velmiplodne_rok_z=rok;
+<a name="l00883"></a>00883 
+<a name="l00884"></a>00884     <span class="keywordtype">int</span> velmiplodne_den_k=0;
+<a name="l00885"></a>00885     <span class="keywordtype">int</span> velmiplodne_mesic_k=0;
+<a name="l00886"></a>00886     <span class="keywordtype">int</span> velmiplodne_rok_k=0;
+<a name="l00887"></a>00887 
+<a name="l00888"></a>00888     <span class="keywordtype">int</span> neplodne_den_z=0;
+<a name="l00889"></a>00889     <span class="keywordtype">int</span> neplodne_mesic_z=0;
+<a name="l00890"></a>00890     <span class="keywordtype">int</span> neplodne_rok_z=0;
+<a name="l00891"></a>00891 
+<a name="l00892"></a>00892     <span class="keywordtype">int</span> neplodne_den_k=0;
+<a name="l00893"></a>00893     <span class="keywordtype">int</span> neplodne_mesic_k=0;
+<a name="l00894"></a>00894     <span class="keywordtype">int</span> neplodne_rok_k=0;
+<a name="l00895"></a>00895 
+<a name="l00896"></a>00896     <span class="keywordflow">if</span>(den&gt;0 &amp;&amp; den&lt;=31 &amp;&amp; mesic&gt;0 &amp;&amp; mesic&lt;=12 &amp;&amp; cyklus&gt;0 &amp;&amp; delka_m&gt;0){
+<a name="l00897"></a>00897         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1;i&lt;delka_m; i++){<span class="comment">//menstruace konec</span>
+<a name="l00898"></a>00898             menstruace_den_k=<a class="code" href="funkce_8cpp.html#a2df89a0b6c94f41def24d988c1641e77" title="nasledujici_den_v_mesici - Následující den v měsící">nasledujici_den_v_mesici</a>(menstruace_den_k, menstruace_mesic_k, menstruace_rok_k);
+<a name="l00899"></a>00899             <span class="keywordflow">if</span>(menstruace_den_k==1)
+<a name="l00900"></a>00900                 menstruace_mesic_k=<a class="code" href="funkce_8cpp.html#a9ada6b049499d9224c99280cff3249c5" title="nasledujici_mesic - Následující měsíc">nasledujici_mesic</a>(menstruace_mesic_k);
+<a name="l00901"></a>00901             <span class="keywordflow">if</span>(menstruace_mesic_k==1 &amp;&amp; menstruace_den_k==1)
+<a name="l00902"></a>00902                 menstruace_rok_k++;
+<a name="l00903"></a>00903         }
+<a name="l00904"></a>00904 
+<a name="l00905"></a>00905         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;cyklus; i++){<span class="comment">//další menstruace začátek</span>
+<a name="l00906"></a>00906             menstruace_den_z=<a class="code" href="funkce_8cpp.html#a2df89a0b6c94f41def24d988c1641e77" title="nasledujici_den_v_mesici - Následující den v měsící">nasledujici_den_v_mesici</a>(menstruace_den_z, menstruace_mesic_z, menstruace_rok_z);
+<a name="l00907"></a>00907             <span class="keywordflow">if</span>(menstruace_den_z==1)
+<a name="l00908"></a>00908                 menstruace_mesic_z=<a class="code" href="funkce_8cpp.html#a9ada6b049499d9224c99280cff3249c5" title="nasledujici_mesic - Následující měsíc">nasledujici_mesic</a>(menstruace_mesic_z);
+<a name="l00909"></a>00909             <span class="keywordflow">if</span>(menstruace_mesic_z==1 &amp;&amp; menstruace_den_z==1)
+<a name="l00910"></a>00910                 menstruace_rok_z++;
+<a name="l00911"></a>00911         }
+<a name="l00912"></a>00912 
+<a name="l00913"></a>00913         <span class="comment">/*for(int i=0; i&lt;(((int)cyklus/2)-2); i++){//velmi plodné dny začátek</span>
+<a name="l00914"></a>00914 <span class="comment">            velmiplodne_den_z=nasledujici_den_v_mesici(velmiplodne_den_z, velmiplodne_mesic_z, velmiplodne_rok_z);</span>
+<a name="l00915"></a>00915 <span class="comment">            if(velmiplodne_den_z==1)</span>
+<a name="l00916"></a>00916 <span class="comment">                velmiplodne_mesic_z=nasledujici_mesic(velmiplodne_mesic_z);</span>
+<a name="l00917"></a>00917 <span class="comment">            if(velmiplodne_mesic_z==1 &amp;&amp; velmiplodne_den_z==1)</span>
+<a name="l00918"></a>00918 <span class="comment">                velmiplodne_rok_z++;</span>
+<a name="l00919"></a>00919 <span class="comment">        }*/</span>
+<a name="l00920"></a>00920 
+<a name="l00921"></a>00921         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;(12+(cyklus-28)); i++){<span class="comment">//velmi plodné dny začátek</span>
+<a name="l00922"></a>00922             velmiplodne_den_z=<a class="code" href="funkce_8cpp.html#a2df89a0b6c94f41def24d988c1641e77" title="nasledujici_den_v_mesici - Následující den v měsící">nasledujici_den_v_mesici</a>(velmiplodne_den_z, velmiplodne_mesic_z, velmiplodne_rok_z);
+<a name="l00923"></a>00923             <span class="keywordflow">if</span>(velmiplodne_den_z==1)
+<a name="l00924"></a>00924                 velmiplodne_mesic_z=<a class="code" href="funkce_8cpp.html#a9ada6b049499d9224c99280cff3249c5" title="nasledujici_mesic - Následující měsíc">nasledujici_mesic</a>(velmiplodne_mesic_z);
+<a name="l00925"></a>00925             <span class="keywordflow">if</span>(velmiplodne_mesic_z==1 &amp;&amp; velmiplodne_den_z==1)
+<a name="l00926"></a>00926                 velmiplodne_rok_z++;
+<a name="l00927"></a>00927         }
+<a name="l00928"></a>00928         neplodne_den_k=velmiplodne_den_z;
+<a name="l00929"></a>00929         neplodne_mesic_k=velmiplodne_mesic_z;
+<a name="l00930"></a>00930         neplodne_rok_k=velmiplodne_rok_z;
+<a name="l00931"></a>00931         <span class="keywordtype">int</span> ndk;
+<a name="l00932"></a>00932         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;4; i++){
+<a name="l00933"></a>00933             ndk=neplodne_den_k;
+<a name="l00934"></a>00934             neplodne_den_k=<a class="code" href="funkce_8cpp.html#a5e181498e6bad45fddd44a5594966f4d" title="predchozi_den_v_mesici - Předchozí den v měsící">predchozi_den_v_mesici</a>(neplodne_den_k, neplodne_mesic_k, neplodne_rok_k);
+<a name="l00935"></a>00935             <span class="keywordflow">if</span>(ndk==1<span class="comment">/*dny_v_mesici(neplodne_mesic_k,neplodne_rok_k)*/</span> ) <span class="comment">//if(nasledujici_den_v_mesici(neplodne_den_k, neplodne_mesic_k, neplodne_rok_k)==1</span>
+<a name="l00936"></a>00936                 neplodne_mesic_k=<a class="code" href="funkce_8cpp.html#af32eece35d2e57c1a5c81e3549e2aa94" title="predchozi_mesic - Předchozí měsíc">predchozi_mesic</a>(neplodne_mesic_k);
+<a name="l00937"></a>00937             <span class="keywordflow">if</span>(neplodne_mesic_k==12 &amp;&amp; neplodne_den_k==<a class="code" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f" title="dny_v_mesici - Dny v měsící">dny_v_mesici</a>(12, neplodne_rok_k) )
+<a name="l00938"></a>00938                 neplodne_rok_k--;
+<a name="l00939"></a>00939         }
+<a name="l00940"></a>00940 
+<a name="l00941"></a>00941         velmiplodne_den_k=velmiplodne_den_z;
+<a name="l00942"></a>00942         velmiplodne_mesic_k=velmiplodne_mesic_z;
+<a name="l00943"></a>00943         velmiplodne_rok_k=velmiplodne_rok_z;
+<a name="l00944"></a>00944         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;5; i++){<span class="comment">//velmi plodné dny konec a ovulace</span>
+<a name="l00945"></a>00945             velmiplodne_den_k=<a class="code" href="funkce_8cpp.html#a2df89a0b6c94f41def24d988c1641e77" title="nasledujici_den_v_mesici - Následující den v měsící">nasledujici_den_v_mesici</a>(velmiplodne_den_k, velmiplodne_mesic_k, velmiplodne_rok_k);
+<a name="l00946"></a>00946             <span class="keywordflow">if</span>(velmiplodne_den_k==1)
+<a name="l00947"></a>00947                 velmiplodne_mesic_k=<a class="code" href="funkce_8cpp.html#a9ada6b049499d9224c99280cff3249c5" title="nasledujici_mesic - Následující měsíc">nasledujici_mesic</a>(velmiplodne_mesic_k);
+<a name="l00948"></a>00948             <span class="keywordflow">if</span>(velmiplodne_mesic_k==1 &amp;&amp; velmiplodne_den_k==1)
+<a name="l00949"></a>00949                 velmiplodne_rok_k++;
+<a name="l00950"></a>00950             <span class="keywordflow">if</span>(i==2){
+<a name="l00951"></a>00951                 ovulace_den=velmiplodne_den_k;
+<a name="l00952"></a>00952                 ovulace_mesic=velmiplodne_mesic_k;
+<a name="l00953"></a>00953                 ovulace_rok=velmiplodne_rok_k;
+<a name="l00954"></a>00954             }
+<a name="l00955"></a>00955         }
+<a name="l00956"></a>00956         neplodne_den_z=velmiplodne_den_k;
+<a name="l00957"></a>00957         neplodne_mesic_z=velmiplodne_mesic_k;
+<a name="l00958"></a>00958         neplodne_rok_z=velmiplodne_rok_k;
+<a name="l00959"></a>00959         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;4; i++){<span class="comment">//nasledující neplodné dny začátek</span>
+<a name="l00960"></a>00960             neplodne_den_z=<a class="code" href="funkce_8cpp.html#a2df89a0b6c94f41def24d988c1641e77" title="nasledujici_den_v_mesici - Následující den v měsící">nasledujici_den_v_mesici</a>(neplodne_den_z, neplodne_mesic_z, neplodne_rok_z);
+<a name="l00961"></a>00961             <span class="keywordflow">if</span>(neplodne_den_z==1)
+<a name="l00962"></a>00962                 neplodne_mesic_z=<a class="code" href="funkce_8cpp.html#a9ada6b049499d9224c99280cff3249c5" title="nasledujici_mesic - Následující měsíc">nasledujici_mesic</a>(neplodne_mesic_z);
+<a name="l00963"></a>00963             <span class="keywordflow">if</span>(neplodne_mesic_z==1 &amp;&amp; neplodne_den_z==1)
+<a name="l00964"></a>00964                 neplodne_rok_z++;
+<a name="l00965"></a>00965         }
+<a name="l00966"></a>00966 
+<a name="l00967"></a>00967         pole[0]=    menstruace_den_z;   <span class="comment">//Další menstruace DEN</span>
+<a name="l00968"></a>00968         pole[1]=    menstruace_mesic_z; <span class="comment">//Další menstruace MESIC</span>
+<a name="l00969"></a>00969         pole[2]=    menstruace_rok_z;   <span class="comment">//Další menstruace ROK</span>
+<a name="l00970"></a>00970 
+<a name="l00971"></a>00971         pole[3]=    menstruace_den_k;   <span class="comment">//Konec předchozí menstruace DEN</span>
+<a name="l00972"></a>00972         pole[4]=    menstruace_mesic_k; <span class="comment">//Konec předchozí menstruace MESIC</span>
+<a name="l00973"></a>00973         pole[5]=    menstruace_rok_k;   <span class="comment">//Konec předchozí menstruace ROK</span>
+<a name="l00974"></a>00974 
+<a name="l00975"></a>00975         pole[6]=    ovulace_den;        <span class="comment">//Ovulace - nejlplodnější den DEN</span>
+<a name="l00976"></a>00976         pole[7]=    ovulace_mesic;      <span class="comment">//Ovulace - nejlplodnější den MESIC</span>
+<a name="l00977"></a>00977         pole[8]=    ovulace_rok;        <span class="comment">//Ovulace - nejlplodnější den ROK</span>
+<a name="l00978"></a>00978 
+<a name="l00979"></a>00979         pole[9]=    velmiplodne_den_z;  <span class="comment">//Začátek velmi plodných dnů DEN</span>
+<a name="l00980"></a>00980         pole[10]=   velmiplodne_mesic_z;    <span class="comment">//Začátek velmi plodných dnů MESIC</span>
+<a name="l00981"></a>00981         pole[11]=   velmiplodne_rok_z;  <span class="comment">//Začátek velmi plodných dnů ROK</span>
+<a name="l00982"></a>00982 
+<a name="l00983"></a>00983         pole[12]=   velmiplodne_den_k;  <span class="comment">//Konec velmi plodných dnů DEN</span>
+<a name="l00984"></a>00984         pole[13]=   velmiplodne_mesic_k;<span class="comment">//Konec velmi plodných dnů MESIC</span>
+<a name="l00985"></a>00985         pole[14]=   velmiplodne_rok_k;  <span class="comment">//Konec velmi plodných dnů ROK</span>
+<a name="l00986"></a>00986 
+<a name="l00987"></a>00987         pole[15]=   neplodne_den_z;     <span class="comment">//Začátek neplodných dnů DEN</span>
+<a name="l00988"></a>00988         pole[16]=   neplodne_mesic_z;   <span class="comment">//Začátek neplodných dnů MESIC</span>
+<a name="l00989"></a>00989         pole[17]=   neplodne_rok_z;     <span class="comment">//Začátek neplodných dnů ROK</span>
+<a name="l00990"></a>00990 
+<a name="l00991"></a>00991         pole[18]=   neplodne_den_k;     <span class="comment">//Konec neplodných dnů DEN</span>
+<a name="l00992"></a>00992         pole[19]=   neplodne_mesic_k;   <span class="comment">//Konec neplodných dnů MESIC</span>
+<a name="l00993"></a>00993         pole[20]=   neplodne_rok_k;     <span class="comment">//Konec neplodných dnů ROK</span>
+<a name="l00994"></a>00994 
+<a name="l00995"></a>00995     }
+<a name="l00996"></a>00996     <span class="keywordflow">else</span>{
+<a name="l00997"></a>00997         b=<span class="keyword">false</span>;
+<a name="l00998"></a>00998     }
+<a name="l00999"></a>00999     <span class="keywordflow">return</span> b;
+<a name="l01000"></a>01000 }
+<a name="l01001"></a>01001 <span class="comment"></span>
+<a name="l01002"></a>01002 <span class="comment">/**</span>
+<a name="l01003"></a>01003 <span class="comment"> *\brief                krokovani_menstruace - Krokování menstruace</span>
+<a name="l01004"></a>01004 <span class="comment"> *\details              Funkce zjistí, kdy budou další menstruace, ovulace apod. podle počtu kroků.</span>
+<a name="l01005"></a>01005 <span class="comment"> *\param[in]    rok     (int) Rok zadaného data.</span>
+<a name="l01006"></a>01006 <span class="comment"> *\param[in]    mesic   (int) Mesic zadaného data.</span>
+<a name="l01007"></a>01007 <span class="comment"> *\param[in]    den     (int) Den zadaného data.</span>
+<a name="l01008"></a>01008 <span class="comment"> *\param[in]    cyklus  (int) Délka menstruačního cyklu.</span>
+<a name="l01009"></a>01009 <span class="comment"> *\param[in]    delka_m (int) Délka menstruace.</span>
+<a name="l01010"></a>01010 <span class="comment"> *\param[in]    delka_m (int) Počet kroků.</span>
+<a name="l01011"></a>01011 <span class="comment"> *\param[out]   kalendar (vector &lt;int&gt;&amp;) [x] Výstupní pole. Po třech den/měsíc/rok: První den menstruace, Konec menstruace, Konec neplodných dnů, Začátek velmi plodných dnů, Ovulace, Konec plodných dnů, Začátek neplodných dnů, Začátek další menstruace</span>
+<a name="l01012"></a>01012 <span class="comment"> *\return               (bool) [true] vše proběhlo ok, [false] chyba.</span>
+<a name="l01013"></a>01013 <span class="comment"> */</span>
+<a name="l01014"></a><a class="code" href="funkce_8h.html#a86b2b3074b068f9e48be0308a6de82d8">01014</a> <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a9bc92ae083ff46a1c9f0d29bd0103e4b" title="krokovani_menstruace - Krokování menstruace">krokovani_menstruace</a>(<span class="keywordtype">int</span> rok, <span class="keywordtype">int</span> mesic, <span class="keywordtype">int</span> den, <span class="keywordtype">int</span> cyklus, <span class="keywordtype">int</span> delka_m, <span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a72511454e33f6b0f7c89f9c19813fe90">kroku</a>, vector &lt;int&gt; &amp;kalendar){
+<a name="l01015"></a>01015     <span class="keywordflow">if</span>(den&gt;0 &amp;&amp; den&lt;=31 &amp;&amp; mesic&gt;0 &amp;&amp; mesic&lt;=12 &amp;&amp; cyklus&gt;0 &amp;&amp; delka_m&gt;0 &amp;&amp; kroku&gt;=0  ){
+<a name="l01016"></a>01016         <span class="keywordtype">int</span> pole[21];
+<a name="l01017"></a>01017         kalendar.push_back(den);    <span class="comment">//První den menstruace DEN</span>
+<a name="l01018"></a>01018         kalendar.push_back(mesic);  <span class="comment">//První den menstruace MESIC</span>
+<a name="l01019"></a>01019         kalendar.push_back(rok);    <span class="comment">//První den menstruace ROK</span>
+<a name="l01020"></a>01020 
+<a name="l01021"></a>01021         <span class="keywordflow">for</span>(;kroku&gt;0;kroku--){
+<a name="l01022"></a>01022             <span class="comment">//dalsi_menstruace(pole[2], pole[1], pole[0], cyklus, delka_m, pole);</span>
+<a name="l01023"></a>01023             <a class="code" href="funkce_8cpp.html#a72838af8428c327ccf3d8c5bfc8c4a78" title="dalsi_menstruace - Další menstruace">dalsi_menstruace</a>(rok, mesic, den, cyklus, delka_m, pole);
+<a name="l01024"></a>01024             den=        pole[0];
+<a name="l01025"></a>01025             mesic=      pole[1];
+<a name="l01026"></a>01026             rok=        pole[2];
+<a name="l01027"></a>01027 
+<a name="l01028"></a>01028             <span class="comment">//Plnění vektoru</span>
+<a name="l01029"></a>01029             kalendar.push_back(pole[3]);    <span class="comment">//Konec menstruace DEN</span>
+<a name="l01030"></a>01030             kalendar.push_back(pole[4]);    <span class="comment">//Konec menstruace MESIC</span>
+<a name="l01031"></a>01031             kalendar.push_back(pole[5]);    <span class="comment">//Konec menstruace ROK</span>
+<a name="l01032"></a>01032 
+<a name="l01033"></a>01033             <span class="keywordflow">if</span>( ( (pole[20]*10000)+(pole[19]*100)+(pole[18]) ) &lt; ( (pole[5]*10000)+(pole[4]*100)+(pole[3]) ) ){
+<a name="l01034"></a>01034                 pole[18]=pole[3];
+<a name="l01035"></a>01035                 pole[19]=pole[4];
+<a name="l01036"></a>01036                 pole[20]=pole[5];
+<a name="l01037"></a>01037             }
+<a name="l01038"></a>01038 
+<a name="l01039"></a>01039             kalendar.push_back(pole[18]);   <span class="comment">//Konec neplodných dnů DEN</span>
+<a name="l01040"></a>01040             kalendar.push_back(pole[19]);   <span class="comment">//Konec neplodných dnů MESIC</span>
+<a name="l01041"></a>01041             kalendar.push_back(pole[20]);   <span class="comment">//Konec neplodných dnů ROK</span>
+<a name="l01042"></a>01042 
+<a name="l01043"></a>01043             kalendar.push_back(pole[9]);    <span class="comment">//Začátek velmi plodných dnů DEN</span>
+<a name="l01044"></a>01044             kalendar.push_back(pole[10]);   <span class="comment">//Začátek velmi plodných dnůcMESIC</span>
+<a name="l01045"></a>01045             kalendar.push_back(pole[11]);   <span class="comment">//Začátek velmi plodných dnů ROK</span>
+<a name="l01046"></a>01046 
+<a name="l01047"></a>01047             kalendar.push_back(pole[6]);    <span class="comment">//Ovulace DEN</span>
+<a name="l01048"></a>01048             kalendar.push_back(pole[7]);    <span class="comment">//Ovulace MESIC</span>
+<a name="l01049"></a>01049             kalendar.push_back(pole[8]);    <span class="comment">//Ovulace ROK</span>
+<a name="l01050"></a>01050 
+<a name="l01051"></a>01051             kalendar.push_back(pole[12]);   <span class="comment">//Konec velmi plodných dnů DEN</span>
+<a name="l01052"></a>01052             kalendar.push_back(pole[13]);   <span class="comment">//Konec velmi plodných dnů MESIC</span>
+<a name="l01053"></a>01053             kalendar.push_back(pole[14]);   <span class="comment">//Konec velmi plodných dnů ROK</span>
+<a name="l01054"></a>01054 
+<a name="l01055"></a>01055             kalendar.push_back(pole[15]);   <span class="comment">//Začátek neplodných dnů DEN</span>
+<a name="l01056"></a>01056             kalendar.push_back(pole[16]);   <span class="comment">//Začátek neplodných dnů MESIC</span>
+<a name="l01057"></a>01057             kalendar.push_back(pole[17]);   <span class="comment">//Začátek neplodných dnů ROK</span>
+<a name="l01058"></a>01058 
+<a name="l01059"></a>01059             kalendar.push_back(pole[0]);    <span class="comment">//Začátek menstruace DEN</span>
+<a name="l01060"></a>01060             kalendar.push_back(pole[1]);    <span class="comment">//Začátek menstruace MESIC</span>
+<a name="l01061"></a>01061             kalendar.push_back(pole[2]);    <span class="comment">//Začátek menstruace ROK</span>
+<a name="l01062"></a>01062         }
+<a name="l01063"></a>01063         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l01064"></a>01064     }
+<a name="l01065"></a>01065     <span class="keywordflow">else</span>{
+<a name="l01066"></a>01066         <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l01067"></a>01067     }
+<a name="l01068"></a>01068 }
+<a name="l01069"></a>01069 <span class="comment"></span>
+<a name="l01070"></a>01070 <span class="comment">/**</span>
+<a name="l01071"></a>01071 <span class="comment"> *\brief                comp_str - Compare string</span>
+<a name="l01072"></a>01072 <span class="comment"> *\details              Funkce zjistí zda jsou si dva (char *) řetězce totožné.</span>
+<a name="l01073"></a>01073 <span class="comment"> *\param[in]    str1    (char const *) První řetězec.</span>
+<a name="l01074"></a>01074 <span class="comment"> *\param[in]    str2    (char const *) Druhý řetězec.</span>
+<a name="l01075"></a>01075 <span class="comment"> *\return               (bool) [true] jsou shodné; [false] neshodné.</span>
+<a name="l01076"></a>01076 <span class="comment"> */</span>
+<a name="l01077"></a><a class="code" href="funkce_8h.html#a7b83c77c6097a5738ed1e574c2f87043">01077</a> <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a761312db75ed5f62a0313408b84f62f6" title="comp_str - Compare string">comp_str</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> *str1, <span class="keywordtype">char</span> <span class="keyword">const</span> *str2){ <span class="comment">//porovnání dvou stringu: true - stejné; false - jiné</span>
+<a name="l01078"></a>01078     <span class="keywordtype">bool</span> b = <span class="keyword">true</span>;
+<a name="l01079"></a>01079     <span class="keywordflow">if</span>(strlen(str1)==strlen(str2)){
+<a name="l01080"></a>01080         <span class="keywordflow">if</span>(strspn(str1, str2)!=strlen(str1))
+<a name="l01081"></a>01081             b = <span class="keyword">false</span>;
+<a name="l01082"></a>01082     }
+<a name="l01083"></a>01083     <span class="keywordflow">else</span>
+<a name="l01084"></a>01084         b = <span class="keyword">false</span>;
+<a name="l01085"></a>01085     <span class="keywordflow">return</span> b;
+<a name="l01086"></a>01086 }
+<a name="l01087"></a>01087 <span class="comment"></span>
+<a name="l01088"></a>01088 <span class="comment">/**</span>
+<a name="l01089"></a>01089 <span class="comment"> *\brief                comp_str - Compare string</span>
+<a name="l01090"></a>01090 <span class="comment"> *\details              Funkce zjistí zda jsou si dva (string) řetězce totožné.</span>
+<a name="l01091"></a>01091 <span class="comment"> *\param[in]    str1    (string) První řetězec.</span>
+<a name="l01092"></a>01092 <span class="comment"> *\param[in]    str2    (string) Druhý řetězec.</span>
+<a name="l01093"></a>01093 <span class="comment"> *\return               (bool) [true] jsou shodné; [false] neshodné.</span>
+<a name="l01094"></a>01094 <span class="comment"> */</span>
+<a name="l01095"></a><a class="code" href="funkce_8h.html#ad3f1f2940138dba5cc3aadc963c93b3d">01095</a> <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a761312db75ed5f62a0313408b84f62f6" title="comp_str - Compare string">comp_str</a>(<span class="keywordtype">string</span> str1, <span class="keywordtype">string</span> str2){ <span class="comment">//porovnání dvou stringu: true - stejné; false - jiné</span>
+<a name="l01096"></a>01096     <span class="keywordtype">bool</span> b = <span class="keyword">true</span>;
+<a name="l01097"></a>01097     <span class="keywordflow">if</span>(str1.size()==str2.size() ){
+<a name="l01098"></a>01098         <span class="keywordflow">if</span>(str1.compare(str2)!=0)
+<a name="l01099"></a>01099             b = <span class="keyword">false</span>;
+<a name="l01100"></a>01100     }
+<a name="l01101"></a>01101     <span class="keywordflow">else</span>
+<a name="l01102"></a>01102         b = <span class="keyword">false</span>;
+<a name="l01103"></a>01103     <span class="keywordflow">return</span> b;
+<a name="l01104"></a>01104 }
+<a name="l01105"></a>01105 <span class="comment"></span>
+<a name="l01106"></a>01106 <span class="comment">/**</span>
+<a name="l01107"></a>01107 <span class="comment"> *\brief                int_dec - Is Integer</span>
+<a name="l01108"></a>01108 <span class="comment"> *\details              Funkce zjistí zda vložený řetězec (char *) je číslo.</span>
+<a name="l01109"></a>01109 <span class="comment"> *\param[in]    str     (char *) Číslo k ověření.</span>
+<a name="l01110"></a>01110 <span class="comment"> *\return               (bool) [true] je číslo; [false] není číslo.</span>
+<a name="l01111"></a>01111 <span class="comment"> */</span>
+<a name="l01112"></a><a class="code" href="funkce_8h.html#a5c276ff47df66bb061d7a792e21d46b1">01112</a> <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a8b6bbdd2a91064925ba4dc3f508b05a6" title="int_dec - Is Integer">int_dec</a>(<span class="keywordtype">char</span> *str){
+<a name="l01113"></a>01113     <span class="keywordtype">bool</span> b = <span class="keyword">true</span>;
+<a name="l01114"></a>01114     <span class="keywordflow">if</span>(strlen(str)&gt;0)
+<a name="l01115"></a>01115         <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;strlen(str); i++){
+<a name="l01116"></a>01116             <span class="keywordflow">if</span>(!isdigit(str[i])){
+<a name="l01117"></a>01117                 b=<span class="keyword">false</span>;
+<a name="l01118"></a>01118                 <span class="keywordflow">break</span>;
+<a name="l01119"></a>01119             }
+<a name="l01120"></a>01120         }
+<a name="l01121"></a>01121 
+<a name="l01122"></a>01122     <span class="keywordflow">return</span> b;
+<a name="l01123"></a>01123 }
+<a name="l01124"></a>01124 <span class="comment"></span>
+<a name="l01125"></a>01125 <span class="comment">/**</span>
+<a name="l01126"></a>01126 <span class="comment"> *\brief                int_dec - Is Integer</span>
+<a name="l01127"></a>01127 <span class="comment"> *\details              Funkce zjistí zda vložený řetězec (string) je číslo.</span>
+<a name="l01128"></a>01128 <span class="comment"> *\param[in]    str     (string) Číslo k ověření.</span>
+<a name="l01129"></a>01129 <span class="comment"> *\return               (bool) [true] je číslo; [false] není číslo.</span>
+<a name="l01130"></a>01130 <span class="comment"> */</span>
+<a name="l01131"></a><a class="code" href="funkce_8h.html#ad51ce8678901921a77cfc4f1894b9882">01131</a> <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a8b6bbdd2a91064925ba4dc3f508b05a6" title="int_dec - Is Integer">int_dec</a>(<span class="keywordtype">string</span> str){
+<a name="l01132"></a>01132     <span class="keywordtype">bool</span> b = <span class="keyword">true</span>;
+<a name="l01133"></a>01133     <span class="keywordflow">if</span>(str.size()&gt;0)
+<a name="l01134"></a>01134         <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;str.size(); i++){
+<a name="l01135"></a>01135             <span class="keywordflow">if</span>(!isdigit(str[i])){
+<a name="l01136"></a>01136                 b=<span class="keyword">false</span>;
+<a name="l01137"></a>01137                 <span class="keywordflow">break</span>;
+<a name="l01138"></a>01138             }
+<a name="l01139"></a>01139         }
+<a name="l01140"></a>01140 
+<a name="l01141"></a>01141     <span class="keywordflow">return</span> b;
+<a name="l01142"></a>01142 }
+<a name="l01143"></a>01143 <span class="comment"></span>
+<a name="l01144"></a>01144 <span class="comment">/**</span>
+<a name="l01145"></a>01145 <span class="comment"> *\brief                split_string - Split String</span>
+<a name="l01146"></a>01146 <span class="comment"> *\details              Funkce rozkouskuje větu na slova (příkazy) a vloží je do vectoru.</span>
+<a name="l01147"></a>01147 <span class="comment"> *\param[in]    tosplit (string) Řetězec - věta.</span>
+<a name="l01148"></a>01148 <span class="comment"> *\param[out]   splited (vector&lt;string&gt; &amp;) Vector se slovy (příkazy).</span>
+<a name="l01149"></a>01149 <span class="comment"> *\return               (void).</span>
+<a name="l01150"></a>01150 <span class="comment"> */</span>
+<a name="l01151"></a><a class="code" href="funkce_8h.html#a8be25e9d2867026034c72034e2f70582">01151</a> <span class="keywordtype">void</span> <a class="code" href="funkce_8cpp.html#aae3d727e6451879999785644d6154762" title="split_string - Split String">split_string</a>(<span class="keywordtype">string</span> tosplit, vector&lt;string&gt; &amp; splited){
+<a name="l01152"></a>01152   <span class="comment">// pomocna promenna</span>
+<a name="l01153"></a>01153   <span class="keywordtype">string</span> tmp;
+<a name="l01154"></a>01154   <span class="comment">// vytvoreni vstupniho streamu ze predaneho stringu</span>
+<a name="l01155"></a>01155   istringstream iss(tosplit);
+<a name="l01156"></a>01156 
+<a name="l01157"></a>01157   <span class="comment">// dokud je co, tak ctem</span>
+<a name="l01158"></a>01158   <span class="keywordflow">while</span> (iss &gt;&gt; tmp) {
+<a name="l01159"></a>01159     <span class="comment">// a cpem to do vectoru</span>
+<a name="l01160"></a>01160     splited.push_back(tmp);
+<a name="l01161"></a>01161   }
+<a name="l01162"></a>01162 }
+<a name="l01163"></a>01163 <span class="comment"></span>
+<a name="l01164"></a>01164 <span class="comment">/**</span>
+<a name="l01165"></a>01165 <span class="comment"> *\brief                str_to_int - String to integer</span>
+<a name="l01166"></a>01166 <span class="comment"> *\details              Funkce převede číselný řetězec (string) na číslo (integer).</span>
+<a name="l01167"></a>01167 <span class="comment"> *\param[in]    str     (string) Čiselný řetězec.</span>
+<a name="l01168"></a>01168 <span class="comment"> *\return               (int) číslo.</span>
+<a name="l01169"></a>01169 <span class="comment"> */</span>
+<a name="l01170"></a><a class="code" href="funkce_8h.html#a80b72096157815f87616a7ebef14aa9d">01170</a> <span class="keywordtype">int</span> <a class="code" href="funkce_8cpp.html#aaaefcf97de62dfc7452f863d83b5fe3b" title="str_to_int - String to integer">str_to_int</a>(<span class="keywordtype">string</span> str){
+<a name="l01171"></a>01171     istringstream is(str);
+<a name="l01172"></a>01172     <span class="keywordtype">int</span> cislo;
+<a name="l01173"></a>01173     <span class="keywordtype">float</span> cislo2;
+<a name="l01174"></a>01174     <span class="keywordflow">if</span>(str.size()&lt;10){
+<a name="l01175"></a>01175         is &gt;&gt; cislo;
+<a name="l01176"></a>01176     }
+<a name="l01177"></a>01177     <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str.size()==10){
+<a name="l01178"></a>01178         is &gt;&gt; cislo2;
+<a name="l01179"></a>01179         <span class="keywordflow">if</span>(cislo2&gt;2147483647)
+<a name="l01180"></a>01180             cislo=2147483647;
+<a name="l01181"></a>01181         <span class="keywordflow">else</span>
+<a name="l01182"></a>01182             cislo=(int) cislo2;
+<a name="l01183"></a>01183     }
+<a name="l01184"></a>01184     <span class="keywordflow">else</span>
+<a name="l01185"></a>01185         cislo=2147483647;
+<a name="l01186"></a>01186     <span class="keywordflow">return</span> cislo;
+<a name="l01187"></a>01187 }
+<a name="l01188"></a>01188 <span class="comment"></span>
+<a name="l01189"></a>01189 <span class="comment">/**</span>
+<a name="l01190"></a>01190 <span class="comment"> *\brief                char_array_to_string_vector - Char string array to string vector</span>
+<a name="l01191"></a>01191 <span class="comment"> *\details              Funkce převede pole s řetězci (char) do vectoru (string).</span>
+<a name="l01192"></a>01192 <span class="comment"> *\param[in]    pole    (char * []) Řetězce v polí.</span>
+<a name="l01193"></a>01193 <span class="comment"> *\param[in]    start   (int) Od které pozice se má začít zapisovát do vectoru.</span>
+<a name="l01194"></a>01194 <span class="comment"> *\param[out]   splited (vector&lt;string&gt; &amp;) Vector pro ukládání řetězců.</span>
+<a name="l01195"></a>01195 <span class="comment"> *\return               (bool) [true] převod byl proveden úspěšně; [false] převod nebyl proveden.</span>
+<a name="l01196"></a>01196 <span class="comment"> */</span>
+<a name="l01197"></a><a class="code" href="funkce_8h.html#a2cc0b121197ba15c69222c2607d00167">01197</a> <span class="keywordtype">bool</span> <a class="code" href="funkce_8cpp.html#a1c1b3f11c9301d37d0546d06ba33e8bd" title="char_array_to_string_vector - Char string array to string vector">char_array_to_string_vector</a>(<span class="keywordtype">char</span> *pole[], <span class="keywordtype">int</span> start, <span class="keywordtype">int</span> velikost, vector&lt;string&gt; &amp; splited){
+<a name="l01198"></a>01198     <span class="keywordtype">bool</span> b=<span class="keyword">false</span>;
+<a name="l01199"></a>01199     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=start; i&lt;velikost-1 ; i++){
+<a name="l01200"></a>01200         splited.push_back(pole[i]);
+<a name="l01201"></a>01201         b=<span class="keyword">true</span>;
+<a name="l01202"></a>01202     }
+<a name="l01203"></a>01203     <span class="keywordflow">return</span> b;
+<a name="l01204"></a>01204 }
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Vše</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Prostory jmen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Soubory</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkce</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Proměnné</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definice maker</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Generováno ne 18. pro 2011 10.35:15 pro projekt Kalendář programem&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
+</body>
+</html>

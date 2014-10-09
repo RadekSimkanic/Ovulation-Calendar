@@ -1,0 +1,1339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Kalendář: Dokumentace souboru funkce.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Generováno programem Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Hledat');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Kalendář</div>
+   <div id="projectbrief">Měsíční,_týdenní_a_menstruační_kalendář</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hlavní&#160;stránka</span></a></li>
+      <li><a href="namespaces.html"><span>Prostory&#160;jmen</span></a></li>
+      <li class="current"><a href="files.html"><span>Soubory</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Hledat" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Seznam&#160;souborů</span></a></li>
+      <li><a href="globals.html"><span>Globální&#160;symboly</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkce</a> &#124;
+<a href="#var-members">Proměnné</a>  </div>
+  <div class="headertitle">
+<h1>Dokumentace souboru funkce.cpp</h1>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &lt;time.h&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;sstream&gt;</code><br/>
+</div>
+<p><a href="funkce_8cpp_source.html">Zobrazit zdrojový text tohoto souboru.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funkce</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a4fb4d20b69ca004e876ce8415d1575e8">prestupny_rok</a> (int rok)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">prestupny_rok - Přestupný rok  <a href="#a4fb4d20b69ca004e876ce8415d1575e8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a4b192683b01b2c1c20e4a29ca3f690d0">prestupny_rok2</a> (int rok)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">prestupny_rok2 - Přestupný rok 2 (v programu se tato funkce nepoužívá)  <a href="#a4b192683b01b2c1c20e4a29ca3f690d0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a0bb41ae083bbb81b312899a93921512f">dny_v_mesici</a> (int cislo_mesice, int rok)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">dny_v_mesici - Dny v měsící  <a href="#a0bb41ae083bbb81b312899a93921512f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a9ada6b049499d9224c99280cff3249c5">nasledujici_mesic</a> (int cislo_mesice)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">nasledujici_mesic - Následující měsíc  <a href="#a9ada6b049499d9224c99280cff3249c5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#af32eece35d2e57c1a5c81e3549e2aa94">predchozi_mesic</a> (int cislo_mesice)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">predchozi_mesic - Předchozí měsíc  <a href="#af32eece35d2e57c1a5c81e3549e2aa94"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#af420877d7aaa35fa9f1d005dfeaeef94">nasledujici_den</a> (int cislo_dne)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">nasledujici_den - Následující den v týdnu  <a href="#af420877d7aaa35fa9f1d005dfeaeef94"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#ab15e6e27558b1fdcb0a112a2f8da2058">predchozi_den</a> (int cislo_dne)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">predchozi_den - Předchozí den v týdnu  <a href="#ab15e6e27558b1fdcb0a112a2f8da2058"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#ac960d6150c3cb74553b291869f24c12a">dnu_v_roce</a> (int rok)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">dnu_v_roce - Dnů v roce  <a href="#ac960d6150c3cb74553b291869f24c12a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a22a395db0168561d98e523135bc0388c">posun_mesice_roky</a> (int next, bool smer, int mesic, int rok, int *vystup)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">posun_mesice_roky - Posun měsíce roky  <a href="#a22a395db0168561d98e523135bc0388c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a9f2625c6264f9c5463a005fe92e2a1a5">pocet_dnu</a> (int den, int mesic, int rok, int den2, int mesic2, int rok2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">pocet_dnu - Počet dnů  <a href="#a9f2625c6264f9c5463a005fe92e2a1a5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a3ed47094c60dfa81f3ee381e663ebd91">generator_dnu</a> (int next, bool smer, int *pole)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">generator_dnu - Generátor dnů  <a href="#a3ed47094c60dfa81f3ee381e663ebd91"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a2df89a0b6c94f41def24d988c1641e77">nasledujici_den_v_mesici</a> (int den, int mesic, int rok)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">nasledujici_den_v_mesici - Následující den v měsící  <a href="#a2df89a0b6c94f41def24d988c1641e77"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a5e181498e6bad45fddd44a5594966f4d">predchozi_den_v_mesici</a> (int den, int mesic, int rok)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">predchozi_den_v_mesici - Předchozí den v měsící  <a href="#a5e181498e6bad45fddd44a5594966f4d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#ad11cf0cc5c6e762eef898c945a013762">tydenni_posun_mesice_roky</a> (int next, bool smer, int den, int mesic, int rok, int *vystup)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">tydenni_posun_mesice_roky - Týdenní posun měsíce roky  <a href="#ad11cf0cc5c6e762eef898c945a013762"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#afaf22ceb59ae4a1e1ee768180dae2ff0">tydenni_generator_dnu</a> (int next, bool smer, int *pole)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">tydenni_generator_dnu - Týdenní generátor dnů  <a href="#afaf22ceb59ae4a1e1ee768180dae2ff0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a482f1dd919ac8172659a14e16ee27517">vypis_cislo</a> (int cislo)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">vypis_cislo - Výpis číslo  <a href="#a482f1dd919ac8172659a14e16ee27517"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a1682789e83a853ed4748c1ba91689952">den_v_tydnu</a> (int den, int mesic, int rok)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">den_v_tydnu - Den v týdnu  <a href="#a1682789e83a853ed4748c1ba91689952"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a8d5ee6bd40e126494ea71f902a622222">svatky</a> (int mesic, int den)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">svatky - Svatky  <a href="#a8d5ee6bd40e126494ea71f902a622222"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a72838af8428c327ccf3d8c5bfc8c4a78">dalsi_menstruace</a> (int rok, int mesic, int den, int cyklus, int delka_m, int *pole)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">dalsi_menstruace - Další menstruace  <a href="#a72838af8428c327ccf3d8c5bfc8c4a78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a9bc92ae083ff46a1c9f0d29bd0103e4b">krokovani_menstruace</a> (int rok, int mesic, int den, int cyklus, int delka_m, int <a class="el" href="main_8cpp.html#a72511454e33f6b0f7c89f9c19813fe90">kroku</a>, vector&lt; int &gt; &amp;kalendar)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">krokovani_menstruace - Krokování menstruace  <a href="#a9bc92ae083ff46a1c9f0d29bd0103e4b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a761312db75ed5f62a0313408b84f62f6">comp_str</a> (char const *str1, char const *str2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">comp_str - Compare string  <a href="#a761312db75ed5f62a0313408b84f62f6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a7e76ab52c09d1d11a4ca3b48db9fa71b">comp_str</a> (string str1, string str2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">comp_str - Compare string  <a href="#a7e76ab52c09d1d11a4ca3b48db9fa71b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a8b6bbdd2a91064925ba4dc3f508b05a6">int_dec</a> (char *str)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">int_dec - Is Integer  <a href="#a8b6bbdd2a91064925ba4dc3f508b05a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a83591e2a425a321f84f269cc54ef2054">int_dec</a> (string str)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">int_dec - Is Integer  <a href="#a83591e2a425a321f84f269cc54ef2054"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#aae3d727e6451879999785644d6154762">split_string</a> (string tosplit, vector&lt; string &gt; &amp;splited)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">split_string - Split String  <a href="#aae3d727e6451879999785644d6154762"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#aaaefcf97de62dfc7452f863d83b5fe3b">str_to_int</a> (string str)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">str_to_int - String to integer  <a href="#aaaefcf97de62dfc7452f863d83b5fe3b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a1c1b3f11c9301d37d0546d06ba33e8bd">char_array_to_string_vector</a> (char *pole[], int start, int velikost, vector&lt; string &gt; &amp;splited)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">char_array_to_string_vector - Char string array to string vector  <a href="#a1c1b3f11c9301d37d0546d06ba33e8bd"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Proměnné</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a95107071b9a25bc8df5074cc44593d81">pocet_mesicu</a> = 12</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funkce_8cpp.html#a7381030aaac922903eeca75bd73d068f">s</a> [<a class="el" href="funkce_8cpp.html#a95107071b9a25bc8df5074cc44593d81">pocet_mesicu</a>][31]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pole se svátky.  <a href="#a7381030aaac922903eeca75bd73d068f"></a><br/></td></tr>
+</table>
+<hr/><h2>Dokumentace funkcí</h2>
+<a class="anchor" id="a1c1b3f11c9301d37d0546d06ba33e8bd"></a><!-- doxytag: member="funkce.cpp::char_array_to_string_vector" ref="a1c1b3f11c9301d37d0546d06ba33e8bd" args="(char *pole[], int start, int velikost, vector&lt; string &gt; &amp;splited)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool char_array_to_string_vector </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pole</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>velikost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>splited</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>char_array_to_string_vector - Char string array to string vector </p>
+<p>Funkce převede pole s řetězci (char) do vectoru (string). </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pole</td><td>(char * []) Řetězce v polí. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>(int) Od které pozice se má začít zapisovát do vectoru. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">splited</td><td>(vector&lt;string&gt; &amp;) Vector pro ukládání řetězců. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(bool) [true] převod byl proveden úspěšně; [false] převod nebyl proveden. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l01197">1197</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e76ab52c09d1d11a4ca3b48db9fa71b"></a><!-- doxytag: member="funkce.cpp::comp_str" ref="a7e76ab52c09d1d11a4ca3b48db9fa71b" args="(string str1, string str2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool comp_str </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>str1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>str2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>comp_str - Compare string </p>
+<p>Funkce zjistí zda jsou si dva (string) řetězce totožné. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>(string) První řetězec. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td>(string) Druhý řetězec. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(bool) [true] jsou shodné; [false] neshodné. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l01095">1095</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a761312db75ed5f62a0313408b84f62f6"></a><!-- doxytag: member="funkce.cpp::comp_str" ref="a761312db75ed5f62a0313408b84f62f6" args="(char const *str1, char const *str2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool comp_str </td>
+          <td>(</td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>str1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>str2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>comp_str - Compare string </p>
+<p>Funkce zjistí zda jsou si dva (char *) řetězce totožné. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>(char const *) První řetězec. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td>(char const *) Druhý řetězec. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(bool) [true] jsou shodné; [false] neshodné. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l01077">1077</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a72838af8428c327ccf3d8c5bfc8c4a78"></a><!-- doxytag: member="funkce.cpp::dalsi_menstruace" ref="a72838af8428c327ccf3d8c5bfc8c4a78" args="(int rok, int mesic, int den, int cyklus, int delka_m, int *pole)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dalsi_menstruace </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>den</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cyklus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delka_m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pole</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>dalsi_menstruace - Další menstruace </p>
+<p>Funkce zjistí, kdy bude další menstruace, ovulace apod. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok</td><td>(int) Rok zadaného data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Mesic zadaného data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">den</td><td>(int) Den zadaného data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cyklus</td><td>(int) Délka menstruačního cyklu. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delka_m</td><td>(int) Délka menstruace. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pole</td><td>(int) [21] Výstupní pole. [0] Menstruace den; [1] Menstruace měsíc; [2] Menstruace rok; [3] Konec předchozí menstruace den; [4] Konec předchozí menstruace měsíc; [5] Konec předchozí menstruace rok; [6] Ovulace den; [7] Ovulace měsíc; [8] Ovulace rok; [9] Začátek velmi plodných dnů - den; [10] Začátek velmi plodných dnů - měsíc; [11] Začátek velmi plodných dnů - rok; [12] Konec velmi plodných dnů - den; [13] Konec velmi plodných dnů - měsíc; [14] Konec velmi plodných dnů - rok; [15] Začátek neplodných dnů - den; [16] Začátek neplodných dnů - měsíc; [17] Začátek neplodných dnů - rok; [18] Konec neplodných dnů - den; [19] Konec neplodných dnů - měsíc; [20] Konec neplodných dnů - rok </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(bool) [true] vše proběhlo ok; [false] chyba. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00866">866</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1682789e83a853ed4748c1ba91689952"></a><!-- doxytag: member="funkce.cpp::den_v_tydnu" ref="a1682789e83a853ed4748c1ba91689952" args="(int den, int mesic, int rok)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int den_v_tydnu </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>den</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>den_v_tydnu - Den v týdnu </p>
+<p>Funkce zjistí, který den v týdnu, je zadané datum. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">den</td><td>(int) Den zadaného data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Mesic zadaného data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok</td><td>(int) Rok zadaného data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) Den v týdnu (1 - 7). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00814">814</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac960d6150c3cb74553b291869f24c12a"></a><!-- doxytag: member="funkce.cpp::dnu_v_roce" ref="ac960d6150c3cb74553b291869f24c12a" args="(int rok)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dnu_v_roce </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>dnu_v_roce - Dnů v roce </p>
+<p>Funkce, která zjistí kolik dnů je v daném roce. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">den</td><td>(int) Číslo aktuálního roku. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) Počet dnů (365, 366). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00537">537</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0bb41ae083bbb81b312899a93921512f"></a><!-- doxytag: member="funkce.cpp::dny_v_mesici" ref="a0bb41ae083bbb81b312899a93921512f" args="(int cislo_mesice, int rok)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dny_v_mesici </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cislo_mesice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>dny_v_mesici - Dny v měsící </p>
+<p>Funkce, která zjistí kolik dní má daný měsíc. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Číslo měsíce k ověření. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok</td><td>(int) Číslo roku ve kterém se zjišťovaný měsíc nachází. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) počet dnů (0 - 31). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00470">470</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ed47094c60dfa81f3ee381e663ebd91"></a><!-- doxytag: member="funkce.cpp::generator_dnu" ref="a3ed47094c60dfa81f3ee381e663ebd91" args="(int next, bool smer, int *pole)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generator_dnu </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>next</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>smer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pole</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>generator_dnu - Generátor dnů </p>
+<p>Funkce, která vypočítá měsíc, rok, atd v konečném měsící podle počtu kroků z aktuálního data (nevolitelného - synchronizace). </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">next</td><td>(int) Počet kroků. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">smer</td><td>(bool) Směr k získání konečného měsíce [true] vpřed; [false] zpět. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pole</td><td>(int)[6] Data s výstupem: [0] Den v týdnu aktuálního dne; [1] Počet dnů v aktuálnímm měsící; [2] Výpočítány konečný měsíc; [3] Výpočítány konečný rok; [4] Den v týdnu, kterým začíná vypočtený měsíc; [5] Den v aktuálním měsící. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(void). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00629">629</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b6bbdd2a91064925ba4dc3f508b05a6"></a><!-- doxytag: member="funkce.cpp::int_dec" ref="a8b6bbdd2a91064925ba4dc3f508b05a6" args="(char *str)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool int_dec </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>int_dec - Is Integer </p>
+<p>Funkce zjistí zda vložený řetězec (char *) je číslo. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>(char *) Číslo k ověření. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(bool) [true] je číslo; [false] není číslo. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l01112">1112</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a83591e2a425a321f84f269cc54ef2054"></a><!-- doxytag: member="funkce.cpp::int_dec" ref="a83591e2a425a321f84f269cc54ef2054" args="(string str)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool int_dec </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>int_dec - Is Integer </p>
+<p>Funkce zjistí zda vložený řetězec (string) je číslo. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>(string) Číslo k ověření. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(bool) [true] je číslo; [false] není číslo. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l01131">1131</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9bc92ae083ff46a1c9f0d29bd0103e4b"></a><!-- doxytag: member="funkce.cpp::krokovani_menstruace" ref="a9bc92ae083ff46a1c9f0d29bd0103e4b" args="(int rok, int mesic, int den, int cyklus, int delka_m, int kroku, vector&lt; int &gt; &amp;kalendar)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool krokovani_menstruace </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>den</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cyklus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delka_m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>kroku</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>kalendar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>krokovani_menstruace - Krokování menstruace </p>
+<p>Funkce zjistí, kdy budou další menstruace, ovulace apod. podle počtu kroků. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok</td><td>(int) Rok zadaného data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Mesic zadaného data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">den</td><td>(int) Den zadaného data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cyklus</td><td>(int) Délka menstruačního cyklu. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delka_m</td><td>(int) Délka menstruace. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delka_m</td><td>(int) Počet kroků. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">kalendar</td><td>(vector &lt;int&gt;&amp;) [x] Výstupní pole. Po třech den/měsíc/rok: První den menstruace, Konec menstruace, Konec neplodných dnů, Začátek velmi plodných dnů, Ovulace, Konec plodných dnů, Začátek neplodných dnů, Začátek další menstruace </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(bool) [true] vše proběhlo ok, [false] chyba. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l01014">1014</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af420877d7aaa35fa9f1d005dfeaeef94"></a><!-- doxytag: member="funkce.cpp::nasledujici_den" ref="af420877d7aaa35fa9f1d005dfeaeef94" args="(int cislo_dne)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nasledujici_den </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cislo_dne</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>nasledujici_den - Následující den v týdnu </p>
+<p>Funkce, která zjistí jaký je následující den v týdnu. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">den</td><td>(int) Číslo aktuálního dne v týdnu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) Číslo následujícího dne v týdnu (1 - 7). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00511">511</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2df89a0b6c94f41def24d988c1641e77"></a><!-- doxytag: member="funkce.cpp::nasledujici_den_v_mesici" ref="a2df89a0b6c94f41def24d988c1641e77" args="(int den, int mesic, int rok)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nasledujici_den_v_mesici </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>den</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>nasledujici_den_v_mesici - Následující den v měsící </p>
+<p>Funkce, která zjistí jaký je následující den v měsící. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">den</td><td>(int) Číslo aktuálního dne v měsící. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Číslo aktuálního měsíce. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok</td><td>(int) Číslo aktuálního roku. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) Číslo následujícího dne v měsící (1 - 31). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00683">683</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ada6b049499d9224c99280cff3249c5"></a><!-- doxytag: member="funkce.cpp::nasledujici_mesic" ref="a9ada6b049499d9224c99280cff3249c5" args="(int cislo_mesice)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nasledujici_mesic </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cislo_mesice</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>nasledujici_mesic - Následující měsíc </p>
+<p>Funkce, která zjistí jaký je následující měsíc. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Číslo aktuálního měsíce. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) Číslo následujícího měsíce (1 - 12). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00485">485</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f2625c6264f9c5463a005fe92e2a1a5"></a><!-- doxytag: member="funkce.cpp::pocet_dnu" ref="a9f2625c6264f9c5463a005fe92e2a1a5" args="(int den, int mesic, int rok, int den2, int mesic2, int rok2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pocet_dnu </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>den</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>den2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesic2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>pocet_dnu - Počet dnů </p>
+<p>Funkce, která zjistí kolik je dnů mezi dvěma daty. Je jedno pokud se zadá napřed menší datum a pak větší nebo naopak. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">den</td><td>(int) Den z data 1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Měsíc z data 1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok</td><td>(int) Rok z data 1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">den2</td><td>(int) Den z data 2. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic2</td><td>(int) Měsíc z data 2. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok2</td><td>(int) Rok z data 2. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) počet dnů. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00585">585</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a22a395db0168561d98e523135bc0388c"></a><!-- doxytag: member="funkce.cpp::posun_mesice_roky" ref="a22a395db0168561d98e523135bc0388c" args="(int next, bool smer, int mesic, int rok, int *vystup)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void posun_mesice_roky </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>next</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>smer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>vystup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>posun_mesice_roky - Posun měsíce roky </p>
+<p>Funkce, která zjistí jaký je následující rok a měsíc při daném krokování od aktuálního (zadáného) data. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">next</td><td>(int) Počet roků. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">smer</td><td>(bool) Směr [true] vpřed; [false] zpět. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Aktuální měsíc. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok</td><td>(int) Aktuální rok. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vystup</td><td>(int)[0] Následující rok; (int)[1] Následující měsíc. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(void). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00554">554</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab15e6e27558b1fdcb0a112a2f8da2058"></a><!-- doxytag: member="funkce.cpp::predchozi_den" ref="ab15e6e27558b1fdcb0a112a2f8da2058" args="(int cislo_dne)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int predchozi_den </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cislo_dne</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>predchozi_den - Předchozí den v týdnu </p>
+<p>Funkce, která zjistí jaký je předchozí den v týdnu. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">den</td><td>(int) Číslo aktuálního dne v týdnu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) Číslo předchozího dne v týdnu (1 - 7). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00524">524</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e181498e6bad45fddd44a5594966f4d"></a><!-- doxytag: member="funkce.cpp::predchozi_den_v_mesici" ref="a5e181498e6bad45fddd44a5594966f4d" args="(int den, int mesic, int rok)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int predchozi_den_v_mesici </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>den</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>predchozi_den_v_mesici - Předchozí den v měsící </p>
+<p>Funkce, která zjistí jaký je předchozí den v měsící. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">den</td><td>(int) Číslo aktuálního dne v měsící. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Číslo aktuálního měsíce. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok</td><td>(int) Číslo aktuálního roku. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) Číslo předchozího dne v měsící (1 - 31). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00703">703</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af32eece35d2e57c1a5c81e3549e2aa94"></a><!-- doxytag: member="funkce.cpp::predchozi_mesic" ref="af32eece35d2e57c1a5c81e3549e2aa94" args="(int cislo_mesice)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int predchozi_mesic </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cislo_mesice</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>predchozi_mesic - Předchozí měsíc </p>
+<p>Funkce, která zjistí jaký je předchozí měsíc. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Číslo aktuálního měsíce. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) Číslo předchozího měsíce (1 - 12). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00498">498</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4fb4d20b69ca004e876ce8415d1575e8"></a><!-- doxytag: member="funkce.cpp::prestupny_rok" ref="a4fb4d20b69ca004e876ce8415d1575e8" args="(int rok)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prestupny_rok </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>prestupny_rok - Přestupný rok </p>
+<p>Funkce, která ověří klasickými způsoby zda daný rok je přestupný. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok</td><td>(int) Číslo roku k ověření. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(bool) [true] přestupný; [false] nepřestupný </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00425">425</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b192683b01b2c1c20e4a29ca3f690d0"></a><!-- doxytag: member="funkce.cpp::prestupny_rok2" ref="a4b192683b01b2c1c20e4a29ca3f690d0" args="(int rok)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prestupny_rok2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>prestupny_rok2 - Přestupný rok 2 (v programu se tato funkce nepoužívá) </p>
+<p>Funkce, která ověří zda daný rok je přestupný. Ukazuje jak by se dál řešit problém v gregorianském kalendáři který nastává každých 2620 let. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok</td><td>(int) Číslo roku k ověření. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) počet dnů v přestupném roce pro vyrovnání (0 - 2). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00446">446</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aae3d727e6451879999785644d6154762"></a><!-- doxytag: member="funkce.cpp::split_string" ref="aae3d727e6451879999785644d6154762" args="(string tosplit, vector&lt; string &gt; &amp;splited)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void split_string </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tosplit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>splited</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>split_string - Split String </p>
+<p>Funkce rozkouskuje větu na slova (příkazy) a vloží je do vectoru. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tosplit</td><td>(string) Řetězec - věta. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">splited</td><td>(vector&lt;string&gt; &amp;) Vector se slovy (příkazy). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(void). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l01151">1151</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaaefcf97de62dfc7452f863d83b5fe3b"></a><!-- doxytag: member="funkce.cpp::str_to_int" ref="aaaefcf97de62dfc7452f863d83b5fe3b" args="(string str)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int str_to_int </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>str_to_int - String to integer </p>
+<p>Funkce převede číselný řetězec (string) na číslo (integer). </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>(string) Čiselný řetězec. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(int) číslo. </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l01170">1170</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d5ee6bd40e126494ea71f902a622222"></a><!-- doxytag: member="funkce.cpp::svatky" ref="a8d5ee6bd40e126494ea71f902a622222" args="(int mesic, int den)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void svatky </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>den</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>svatky - Svatky </p>
+<p>Funkce, která vypíše v daný den svátek (jmén či státní svátky). </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">den</td><td>(int) Den zadaného data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Mesic zadaného data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(void). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00850">850</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afaf22ceb59ae4a1e1ee768180dae2ff0"></a><!-- doxytag: member="funkce.cpp::tydenni_generator_dnu" ref="afaf22ceb59ae4a1e1ee768180dae2ff0" args="(int next, bool smer, int *pole)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tydenni_generator_dnu </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>next</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>smer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pole</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>tydenni_generator_dnu - Týdenní generátor dnů </p>
+<p>Funkce, která zjistí jaký je den, měsíc a rok ve vypočteném týdením bloku, který se vypočítá počtem kroků od aktualního data. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">next</td><td>(int) Počet kroků. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">smer</td><td>(bool) Směr krokování [true] vpřed; [false] zpět. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vystup</td><td>(int)[3] Výstup start dne vypočteného týdne [0] rok; [1] měsíc; [2] rok. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(void). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00769">769</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad11cf0cc5c6e762eef898c945a013762"></a><!-- doxytag: member="funkce.cpp::tydenni_posun_mesice_roky" ref="ad11cf0cc5c6e762eef898c945a013762" args="(int next, bool smer, int den, int mesic, int rok, int *vystup)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tydenni_posun_mesice_roky </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>next</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>smer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>den</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rok</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>vystup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>tydenni_posun_mesice_roky - Týdenní posun měsíce roky </p>
+<p>Funkce, která zjistí jaký je den, měsíc a rok ve vypočteném týdením bloku, který se vypočítá počtem kroků od zadaného data. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">next</td><td>(int) Počet kroků. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">smer</td><td>(bool) Směr krokování [true] vpřed; [false] zpět. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">den</td><td>(int) Den zadaného data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesic</td><td>(int) Měsíc zadaného data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rok</td><td>(int) Rok zadaného data. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vystup</td><td>(int)[3] Výstup start dne vypočteného týdne [0] rok; [1] měsíc; [2] rok. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(void). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00731">731</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a482f1dd919ac8172659a14e16ee27517"></a><!-- doxytag: member="funkce.cpp::vypis_cislo" ref="a482f1dd919ac8172659a14e16ee27517" args="(int cislo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vypis_cislo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cislo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>vypis_cislo - Výpis číslo </p>
+<p>Vypíše číslo zarovnané na dvě cifry. </p>
+<dl><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cislo</td><td>(int) Číslo připraveno na vypis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Návratová hodnota:</b></dt><dd>(void). </dd></dl>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00799">799</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Dokumentace proměnných</h2>
+<a class="anchor" id="a95107071b9a25bc8df5074cc44593d81"></a><!-- doxytag: member="funkce.cpp::pocet_mesicu" ref="a95107071b9a25bc8df5074cc44593d81" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="funkce_8cpp.html#a95107071b9a25bc8df5074cc44593d81">pocet_mesicu</a> = 12</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00015">15</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7381030aaac922903eeca75bd73d068f"></a><!-- doxytag: member="funkce.cpp::s" ref="a7381030aaac922903eeca75bd73d068f" args="[pocet_mesicu][31]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* <a class="el" href="funkce_8cpp.html#a7381030aaac922903eeca75bd73d068f">s</a>[<a class="el" href="funkce_8cpp.html#a95107071b9a25bc8df5074cc44593d81">pocet_mesicu</a>][31]</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Pole se svátky. </p>
+<p>Pole o velikosti 12 x 31 slouží v tydenním módu pro demonstrování kdy je jaký svátek </p>
+
+<p>Definice je uvedena na řádku <a class="el" href="funkce_8cpp_source.html#l00021">21</a> v souboru <a class="el" href="funkce_8cpp_source.html">funkce.cpp</a>.</p>
+
+</div>
+</div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Vše</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Prostory jmen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Soubory</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkce</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Proměnné</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definice maker</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Generováno ne 18. pro 2011 10.35:15 pro projekt Kalendář programem&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
+</body>
+</html>
